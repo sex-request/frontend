@@ -23,7 +23,7 @@ module.exports = {
 
     // Handle module aliases
     '^__tests__/(.*)$': '<rootDir>/__tests__/$1',
-    '^@/components/(.*)$': '<rootDir>/components/$1',
+    '^components/(.*)$': '<rootDir>/components/$1',
     '^pages/(.*)$': '<rootDir>/pages/$1'
   },
   setupFilesAfterEnv: [

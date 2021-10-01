@@ -13,7 +13,8 @@
     "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "before:push": "yarn lint && yarn test:coverage && yarn e2e:headless"
   },
   "dependencies": {
     "next": "11.1.2",
@@ -40,6 +41,7 @@
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jest": "^24.5.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
