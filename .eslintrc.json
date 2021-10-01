@@ -1,29 +1,35 @@
 {
-  "env": {
-    "jest": true,
-    "cypress/globals": true
-  },
   "root": true,
   "extends": [
     "next/core-web-vitals",
-    "plugin:cypress/recommended",
     "airbnb",
     "airbnb-typescript"
   ],
   "plugins": [
     "testing-library",
-    "@typescript-eslint",
-    "cypress"
+    "@typescript-eslint"
   ],
   "parser": "@typescript-eslint/parser",
   "overrides": [
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)"
+      ],
+      "env": { "jest/globals": true },
+      "globals": {
+        "context": "readonly"
+      },
+      "plugins": ["jest"],
+      "extends": ["plugin:jest/recommended"]
+    },
     // Only uses Testing Library lint rules in test files
     {
       "files": [
-        "**/__tests__/**/*.[jt]s?(x)",
-        "**/?(*.)+(spec|test).[jt]s?(x)"
+        "**/cypress/**/*.[jt]s?(x)"
       ],
-      "extends": ["plugin:testing-library/react"]
+      "env": { "cypress/globals": true },
+      "plugins": ["cypress"],
+      "extends": ["plugin:cypress/recommended"]
     }
   ],
   "parserOptions": {
