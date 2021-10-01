@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 
-import Input from 'components/names/Input';
+import Input from 'components/Names/Input';
 
 describe('names/input', () => {
   context('value가 변할 때', () => {

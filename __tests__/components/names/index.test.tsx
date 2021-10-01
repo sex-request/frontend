@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 
-import Names from 'components/names';
+import Names from 'components/Names';
 
 const buttonLabel = {
   add: '추가',
