@@ -20,7 +20,10 @@
         "context": "readonly"
       },
       "plugins": ["jest"],
-      "extends": ["plugin:jest/recommended"]
+      "extends": ["plugin:jest/recommended"],
+      "rules": {
+        "jest/expect-expect": "off"
+      }
     },
     // Only uses Testing Library lint rules in test files
     {
