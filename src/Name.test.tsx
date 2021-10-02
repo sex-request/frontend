@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 
-import Name from 'components/Names/Name';
+import Name from 'src/Name';
 
 describe('names/Name', () => {
   context('버튼을 클릭했을 때', () => {
