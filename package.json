@@ -14,7 +14,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "before:push": "yarn lint && yarn test:coverage && yarn e2e:headless"
+    "ci": "yarn lint && yarn test:coverage && yarn e2e:headless"
   },
   "dependencies": {
     "next": "11.1.2",
