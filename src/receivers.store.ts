@@ -1,10 +1,11 @@
 import { atom } from 'jotai';
 
-const initialValue = atom<string[]>([]);
-
-const receivers = atom<string[], string>(
-  (get) => get(initialValue),
-  (get, set, name) => set(initialValue, [...get(initialValue), name]),
+export const receiversStore = atom<string[]>([]);
+export const addReceiver = atom<null, string>(
+  null,
+  (get, set, name) => set(receiversStore, get(receiversStore).concat(name)),
 );
-
-export default receivers;
+export const removeReceiver = atom<null, number>(
+  null,
+  (get, set, index) => set(receiversStore, get(receiversStore).filter((_, i) => i !== index)),
+);

@@ -9,5 +9,3 @@ export const removeRequester = atom<null, number>(
   null,
   (get, set, index) => set(requestersStore, get(requestersStore).filter((_, i) => i !== index)),
 );
-
-export default addRequester;
