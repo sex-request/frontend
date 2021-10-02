@@ -1,5 +1,5 @@
-import Input from './Input';
-import Name from './Name';
+import Input from 'src/Input';
+import Name from 'src/Name';
 
 interface Props {
   value: string;
