@@ -48,5 +48,5 @@ describe('Requesters component', () => {
 
       expect(screen.queryByText(given.value)).toBeNull();
     });
-  })
+  });
 });
