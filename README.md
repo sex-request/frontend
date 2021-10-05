@@ -10,7 +10,7 @@
 ![Next.JS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![Jotai](https://img.shields.io/badge/Jotai-white?style=for-the-badge)
 
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](juuni.ni.i@gmail.com)  
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:juuni.ni.i@gmail.com)
 
 ![logo](./public/logo.png)
 
