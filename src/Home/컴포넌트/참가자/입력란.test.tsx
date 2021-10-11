@@ -32,7 +32,7 @@ describe('입력란 컴포넌트', () => {
         onKeyUpEnter={onKeyUpEnter}
       />);
 
-      fireEvent.keyDown(
+      fireEvent.keyUp(
         screen.getByRole('textbox'),
         { key: 'Enter' },
       );
@@ -51,7 +51,7 @@ describe('입력란 컴포넌트', () => {
         onKeyUpEnter={onKeyUpEnter}
       />);
 
-      fireEvent.keyDown(
+      fireEvent.keyUp(
         screen.getByRole('textbox'),
         { key: 'Ctrl' },
       );
