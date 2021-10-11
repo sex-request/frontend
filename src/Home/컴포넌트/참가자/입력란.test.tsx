@@ -10,7 +10,6 @@ describe('입력란 컴포넌트', () => {
       render(<입력란
         value=""
         onChange={onChange}
-        onKeyUpEnter={() => {}}
       />);
 
       fireEvent.change(
@@ -19,44 +18,6 @@ describe('입력란 컴포넌트', () => {
       );
 
       expect(onChange).toBeCalled();
-    });
-  });
-
-  context('엔터를 눌렀을 때', () => {
-    const onKeyUpEnter: () => void = jest.fn();
-
-    it('onKeyUpEnter 함수가 호출됩니다.', () => {
-      render(<입력란
-        value=""
-        onChange={() => {}}
-        onKeyUpEnter={onKeyUpEnter}
-      />);
-
-      fireEvent.keyUp(
-        screen.getByRole('textbox'),
-        { key: 'Enter' },
-      );
-
-      expect(onKeyUpEnter).toBeCalled();
-    });
-  });
-
-  context('엔터가 아닌 키를 눌렀을 때', () => {
-    const onKeyUpEnter: () => void = jest.fn();
-
-    it('onKeyUpEnter 함수가 호출되지 않습니다.', () => {
-      render(<입력란
-        value=""
-        onChange={() => {}}
-        onKeyUpEnter={onKeyUpEnter}
-      />);
-
-      fireEvent.keyUp(
-        screen.getByRole('textbox'),
-        { key: 'Ctrl' },
-      );
-
-      expect(onKeyUpEnter).not.toBeCalled();
     });
   });
 });
