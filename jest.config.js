@@ -30,7 +30,7 @@ module.exports = {
     '^src/(.*)$': '<rootDir>/src/$1',
   },
   setupFilesAfterEnv: [
-    '<rootDir>/jest.setup.js',
+    '<rootDir>/jest.setup.ts',
     'jest-plugin-context/setup',
   ],
   testPathIgnorePatterns: [
