@@ -1,12 +1,12 @@
 interface Props {
-  시간: string;
+  날짜: string;
   disabled: boolean;
-  onChange: (시간: string) => void;
+  onChange: (날짜: string) => void;
   onChecked: (체크됨: boolean) => void;
 }
 
-export default function 시간입력란({
-  시간,
+export default function 날짜입력란({
+  날짜,
   disabled,
   onChange,
   onChecked,
@@ -18,10 +18,10 @@ export default function 시간입력란({
         checked={!disabled}
         onChange={(e) => onChecked(e.target.checked)}
       />
-      시간
+      날짜
       <input
-        type="time"
-        value={시간}
+        type="date"
+        value={날짜}
         disabled={disabled}
         onChange={(e) => onChange(e.target.value)}
       />
