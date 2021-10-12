@@ -12,7 +12,7 @@ export default function 시간입력란({
   onChecked,
 }: Props): JSX.Element {
   return (
-    <>
+    <div>
       <input
         type="checkbox"
         checked={!disabled}
@@ -25,6 +25,6 @@ export default function 시간입력란({
         disabled={disabled}
         onChange={(e) => onChange(e.target.value)}
       />
-    </>
+    </div>
   );
 }
