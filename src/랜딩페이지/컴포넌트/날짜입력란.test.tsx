@@ -1,13 +1,13 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import 시간입력란 from 'src/랜딩페이지/컴포넌트/시간입력란';
+import 날짜입력란 from 'src/랜딩페이지/컴포넌트/날짜입력란';
 
-describe('시간입력란 컴포넌트', () => {
+describe('날짜입력란 컴포넌트', () => {
   context('체크박스를 클릭할 때', () => {
     const onChecked: () => void = jest.fn();
 
     it('onChecked 함수를 호출합니다.', () => {
-      render(<시간입력란
-        시간=""
+      render(<날짜입력란
+        날짜=""
         disabled={false}
         onChange={() => {}}
         onChecked={onChecked}
@@ -21,12 +21,12 @@ describe('시간입력란 컴포넌트', () => {
     });
   });
 
-  context('시간이 수정될 때', () => {
+  context('날짜가 수정될 때', () => {
     const onChange: () => void = jest.fn();
 
     it('onChange 함수를 호출합니다.', () => {
-      render(<시간입력란
-        시간=""
+      render(<날짜입력란
+        날짜=""
         disabled={false}
         onChange={onChange}
         onChecked={() => {}}
@@ -34,7 +34,7 @@ describe('시간입력란 컴포넌트', () => {
 
       fireEvent.change(
         screen.getByDisplayValue(''),
-        { target: { value: '15:45' } },
+        { target: { value: '2021-10-13' } },
       );
 
       expect(onChange).toBeCalled();
