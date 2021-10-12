@@ -5,6 +5,7 @@ import 입력란 from 'src/랜딩페이지/컴포넌트/입력란';
 import 시간입력란 from 'src/랜딩페이지/컴포넌트/시간입력란';
 import 날짜입력란 from 'src/랜딩페이지/컴포넌트/날짜입력란';
 import 장소입력란 from 'src/랜딩페이지/컴포넌트/장소입력란';
+import 약속입력란 from 'src/랜딩페이지/컴포넌트/약속입력란';
 
 export default function 랜딩페이지(): JSX.Element {
   const [신청하는사람, 신청하는사람_수정] = useState<string>('');
@@ -15,6 +16,8 @@ export default function 랜딩페이지(): JSX.Element {
   const [날짜_사용함, 날짜_사용함_수정] = useState<boolean>(true);
   const [장소, 장소_수정] = useState<string>('');
   const [장소_사용함, 장소_사용함_수정] = useState<boolean>(true);
+  const [약속, 약속_수정] = useState<string>('');
+  const [약속_사용함, 약속_사용함_수정] = useState<boolean>(true);
 
   return (
     <>
@@ -62,6 +65,12 @@ export default function 랜딩페이지(): JSX.Element {
             onChange={장소_수정}
             disabled={!장소_사용함}
             onChecked={장소_사용함_수정}
+          />
+          <약속입력란
+            약속={약속}
+            onChange={약속_수정}
+            disabled={!약속_사용함}
+            onChecked={약속_사용함_수정}
           />
         </section>
       </main>
