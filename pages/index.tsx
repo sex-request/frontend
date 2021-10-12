@@ -2,10 +2,13 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 import 입력란 from 'src/랜딩페이지/컴포넌트/입력란';
+import 시간입력란 from 'src/랜딩페이지/컴포넌트/시간입력란';
 
 export default function 랜딩페이지(): JSX.Element {
-  const [신청하는사람, 신청하는사람_수정] = useState('');
-  const [신청받는사람, 신청받는사람_수정] = useState('');
+  const [신청하는사람, 신청하는사람_수정] = useState<string>('');
+  const [신청받는사람, 신청받는사람_수정] = useState<string>('');
+  const [시간, 시간_수정] = useState<string>('');
+  const [시간_사용함, 시간_사용함_수정] = useState<boolean>(true);
 
   return (
     <>
@@ -34,6 +37,15 @@ export default function 랜딩페이지(): JSX.Element {
           <입력란 value={신청받는사람} onChange={신청받는사람_수정} />
           에게 섹스를 신청합니다.
         </h2>
+
+        <section>
+          <시간입력란
+            시간={시간}
+            onChange={시간_수정}
+            disabled={!시간_사용함}
+            onChecked={시간_사용함_수정}
+          />
+        </section>
       </main>
 
       <footer>
