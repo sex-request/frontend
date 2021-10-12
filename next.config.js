@@ -24,9 +24,9 @@ module.exports = {
   reactStrictMode: true,
 	images: {
     loader: 'imgix',
-    path: 'https://sex-request.github.io/',
+    path: 'http://sex-request.github.io/frontend/',
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://sex-request.github.io' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'http://sex-request.github.io/frontend/' : '',
   webpack: (config, { webpack }) => {
 		config.plugins.push(
 			new webpack.ProvidePlugin({
