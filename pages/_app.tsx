@@ -10,6 +10,7 @@ function App({ Component, pageProps }: AppProps) {
         <title>섹스 신청서</title>
         <meta name="description" content="섹스 신청서" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/frontend/favicon.ico" />
       </Head>
       <Component {...pageProps} />
     </>
