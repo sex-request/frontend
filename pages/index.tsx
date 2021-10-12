@@ -4,6 +4,7 @@ import { useState } from 'react';
 import 입력란 from 'src/랜딩페이지/컴포넌트/입력란';
 import 시간입력란 from 'src/랜딩페이지/컴포넌트/시간입력란';
 import 날짜입력란 from 'src/랜딩페이지/컴포넌트/날짜입력란';
+import 장소입력란 from 'src/랜딩페이지/컴포넌트/장소입력란';
 
 export default function 랜딩페이지(): JSX.Element {
   const [신청하는사람, 신청하는사람_수정] = useState<string>('');
@@ -12,6 +13,8 @@ export default function 랜딩페이지(): JSX.Element {
   const [시간_사용함, 시간_사용함_수정] = useState<boolean>(true);
   const [날짜, 날짜_수정] = useState<string>('');
   const [날짜_사용함, 날짜_사용함_수정] = useState<boolean>(true);
+  const [장소, 장소_수정] = useState<string>('');
+  const [장소_사용함, 장소_사용함_수정] = useState<boolean>(true);
 
   return (
     <>
@@ -53,6 +56,12 @@ export default function 랜딩페이지(): JSX.Element {
             onChange={시간_수정}
             disabled={!시간_사용함}
             onChecked={시간_사용함_수정}
+          />
+          <장소입력란
+            장소={장소}
+            onChange={장소_수정}
+            disabled={!장소_사용함}
+            onChecked={장소_사용함_수정}
           />
         </section>
       </main>
