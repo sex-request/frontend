@@ -24,7 +24,7 @@ module.exports = {
   reactStrictMode: true,
 	images: {
     loader: 'imgix',
-    path: '/',
+    path: 'https://sex-request.github.io/',
   },
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://sex-request.github.io' : '',
   webpack: (config, { webpack }) => {
