@@ -34,7 +34,7 @@ describe('약속입력란 컴포넌트', () => {
 
       fireEvent.change(
         screen.getByRole('textbox'),
-        { target: { value: '2021-10-13' } },
+        { target: { value: '- 10분 이상 할 것을 약속합니다.' } },
       );
 
       expect(onChange).toBeCalled();
