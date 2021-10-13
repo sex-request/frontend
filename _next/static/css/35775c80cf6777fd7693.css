@@ -1,0 +1,36 @@
+.____________jO73N {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(255, 227, 232);
+}
+
+.__________3ZVJg {
+  margin-bottom: 2rem;
+}
+
+.__________1DOz1 {
+  font-size: 2.5rem;
+}
+
+.__________1DOz1 * {
+  vertical-align: bottom;
+}
+
+.__________1DOz1 img {
+  width: 4rem;
+  height: 4rem;
+}
+
