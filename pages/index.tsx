@@ -23,6 +23,15 @@ export default function 랜딩페이지(): JSX.Element {
 
   return (
     <div className={스타일.컨테이너}>
+      <a
+        href="https://github.com/sex-request/frontend"
+        className={스타일.깃허브로_가기}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Go To Github
+      </a>
+
       <header className={스타일.헤더}>
         <h1 className={스타일.제목}>
           <Image
