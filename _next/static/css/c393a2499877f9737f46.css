@@ -159,3 +159,26 @@
   background-color: rgb(175, 175, 175);
 }
 
+.___________2_NQR p {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+          flex-direction: row;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+          justify-content: flex-start;
+}
+
+.___________2_NQR strong {
+  -webkit-flex: 1 1;
+     -moz-box-flex: 1;
+          flex: 1 1;
+  margin: 0 1rem;
+}
+
