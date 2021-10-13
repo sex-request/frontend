@@ -118,6 +118,7 @@
 .선택입력란 input[type="text"],
 .선택입력란 textarea {
   flex: 1;
+  max-width: 67%;
   height: 2rem;
   margin-left: 1rem;
   padding: 0.5rem 1rem;
