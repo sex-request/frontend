@@ -3,7 +3,7 @@ interface Props {
   onChange: (value: string) => void;
 }
 
-export default function 입력란({
+export default function 이름입력란({
   value,
   onChange,
 }: Props): JSX.Element {

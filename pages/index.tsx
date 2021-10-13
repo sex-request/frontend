@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-import 입력란 from 'src/랜딩페이지/컴포넌트/입력란';
+import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
 import 시간입력란 from 'src/랜딩페이지/컴포넌트/시간입력란';
 import 날짜입력란 from 'src/랜딩페이지/컴포넌트/날짜입력란';
 import 장소입력란 from 'src/랜딩페이지/컴포넌트/장소입력란';
@@ -41,9 +41,9 @@ export default function 랜딩페이지(): JSX.Element {
 
       <main>
         <h2>
-          <입력란 value={신청하는사람} onChange={신청하는사람_수정} />
+          <이름입력란 value={신청하는사람} onChange={신청하는사람_수정} />
           가
-          <입력란 value={신청받는사람} onChange={신청받는사람_수정} />
+          <이름입력란 value={신청받는사람} onChange={신청받는사람_수정} />
           에게 섹스를 신청합니다.
         </h2>
 
