@@ -1,4 +1,6 @@
 .____________jO73N {
+  overflow: hidden;
+  position: relative;
   display: -webkit-flex;
   display: -moz-box;
   display: flex;
@@ -15,6 +17,32 @@
   width: 100vw;
   height: 100vh;
   background: rgb(255, 227, 232);
+}
+
+._______________2cK75 {
+  position: absolute;
+  top: 1.6rem;
+  right: -7.2rem;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+          justify-content: center;
+  width: 20rem;
+  height: 2.4rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: pink;
+  border: 0.4rem solid hotpink;
+  outline: 0.4rem solid pink;
 }
 
 .__________3ZVJg {
