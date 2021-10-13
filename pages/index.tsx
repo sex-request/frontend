@@ -27,7 +27,7 @@ export default function 랜딩페이지(): JSX.Element {
         href="https://github.com/sex-request/frontend"
         className={스타일.깃허브로_가기}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer nofollow"
       >
         Go To Github
       </a>
