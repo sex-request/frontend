@@ -119,3 +119,15 @@
   color: rgb(175, 175, 175);
   background-color: rgb(175, 175, 175);
 }
+
+.서명란 p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.서명란 strong {
+  flex: 1;
+  margin: 0 1rem;
+}

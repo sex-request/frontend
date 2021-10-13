@@ -77,19 +77,15 @@ export default function 랜딩페이지(): JSX.Element {
         </section>
       </main>
 
-      <footer>
+      <footer className={스타일.서명란}>
         <p>
           신청하는사람
-          {' '}
-          {신청하는사람}
-          {' '}
+          <strong>{신청하는사람}</strong>
           (인)
         </p>
         <p>
           신청받는사람
-          {' '}
-          {신청받는사람}
-          {' '}
+          <strong>{신청받는사람}</strong>
           (인)
         </p>
       </footer>
