@@ -42,7 +42,7 @@ export default function 랜딩페이지(): JSX.Element {
       </header>
 
       <main>
-        <h2>
+        <h2 className={스타일.이름입력란}>
           <이름입력란 value={신청하는사람} onChange={신청하는사람_수정} />
           가
           <이름입력란 value={신청받는사람} onChange={신청받는사람_수정} />

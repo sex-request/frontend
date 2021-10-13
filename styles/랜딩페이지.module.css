@@ -24,3 +24,28 @@
   width: 4rem;
   height: 4rem;
 }
+
+.이름입력란 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.이름입력란 input {
+  width: 4rem;
+  height: 1.5rem;
+  margin: 0 0.4rem;
+  line-height: 1rem;
+  text-align: center;
+  background-color: pink;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.이름입력란 input:first-child {
+  margin-left: 0;
+}
