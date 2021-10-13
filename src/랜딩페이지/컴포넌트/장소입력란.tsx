@@ -24,6 +24,7 @@ export default function 장소입력란({
         value={장소}
         disabled={disabled}
         onChange={(e) => onChange(e.target.value)}
+        placeholder="예: - 우리집❤️"
       />
     </div>
   );
