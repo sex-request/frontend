@@ -23,6 +23,7 @@ export default function 약속입력란({
         value={약속}
         disabled={disabled}
         onChange={(e) => onChange(e.target.value)}
+        placeholder="예: - 10분 이상 하겠습니다."
       />
     </div>
   );
