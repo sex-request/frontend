@@ -1,5 +1,26 @@
 .컨테이너 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
   background: rgb(255, 227, 232);
+}
+
+.헤더 {
+  margin-bottom: 2rem;
+}
+
+.제목 {
+  font-size: 2.5rem;
+}
+
+.제목 * {
+  vertical-align: bottom;
+}
+
+.제목 img {
+  width: 4rem;
+  height: 4rem;
 }

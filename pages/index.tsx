@@ -23,8 +23,8 @@ export default function 랜딩페이지(): JSX.Element {
 
   return (
     <div className={스타일.컨테이너}>
-      <header>
-        <h1>
+      <header className={스타일.헤더}>
+        <h1 className={스타일.제목}>
           <Image
             src="/logo.png"
             alt=""
