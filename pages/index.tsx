@@ -49,7 +49,7 @@ export default function 랜딩페이지(): JSX.Element {
           에게 섹스를 신청합니다.
         </h2>
 
-        <section>
+        <section className={스타일.선택입력란}>
           <날짜입력란
             날짜={날짜}
             onChange={날짜_수정}
