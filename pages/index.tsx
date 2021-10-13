@@ -7,6 +7,8 @@ import 날짜입력란 from 'src/랜딩페이지/컴포넌트/날짜입력란';
 import 장소입력란 from 'src/랜딩페이지/컴포넌트/장소입력란';
 import 약속입력란 from 'src/랜딩페이지/컴포넌트/약속입력란';
 
+import 스타일 from 'styles/랜딩페이지.module.css';
+
 export default function 랜딩페이지(): JSX.Element {
   const [신청하는사람, 신청하는사람_수정] = useState<string>('');
   const [신청받는사람, 신청받는사람_수정] = useState<string>('');
@@ -20,7 +22,7 @@ export default function 랜딩페이지(): JSX.Element {
   const [약속_사용함, 약속_사용함_수정] = useState<boolean>(true);
 
   return (
-    <>
+    <div className={스타일.컨테이너}>
       <header>
         <h1>
           <Image
@@ -91,6 +93,6 @@ export default function 랜딩페이지(): JSX.Element {
           (인)
         </p>
       </footer>
-    </>
+    </div>
   );
 }
