@@ -2,6 +2,7 @@
 const { ESBuildMinifyPlugin } = require('esbuild-loader');
 
 const isProduction = process.env.NODE_ENV === 'production';
+const productionURL = 'https://sex-request.github.io/frontend/';
 
 function useEsbuildMinify(config, options) {
 	const { minimizer } = config.optimization;
@@ -31,9 +32,9 @@ module.exports = withMDX({
 	pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 	images: {
     loader: 'imgix',
-    path: isProduction ? 'https://sex-request.github.io/frontend/' : '/',
+    path: isProduction ? productionURL : '/',
   },
-  assetPrefix: isProduction ? 'https://sex-request.github.io/frontend/' : '',
+  assetPrefix: isProduction ? productionURL : '',
   webpack: (config, { webpack }) => {
 		config.plugins.push(
 			new webpack.ProvidePlugin({
