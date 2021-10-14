@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const { ESBuildMinifyPlugin } = require('esbuild-loader');
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 function useEsbuildMinify(config, options) {
 	const { minimizer } = config.optimization;
 	const terserIndex = minimizer.findIndex(
@@ -20,13 +22,18 @@ function useEsbuildLoader(config, options) {
 	};
 }
 
-module.exports = {
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx$/,
+});
+
+module.exports = withMDX({
   reactStrictMode: true,
+	pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 	images: {
     loader: 'imgix',
-    path: 'https://sex-request.github.io/frontend/',
+    path: isProduction ? 'https://sex-request.github.io/frontend/' : '/',
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://sex-request.github.io/frontend/' : '',
+  assetPrefix: isProduction ? 'https://sex-request.github.io/frontend/' : '',
   webpack: (config, { webpack }) => {
 		config.plugins.push(
 			new webpack.ProvidePlugin({
@@ -43,12 +50,4 @@ module.exports = {
 
 		return config;
 	},
-}
-
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx$/,
-});
-
-module.exports = withMDX({
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 });

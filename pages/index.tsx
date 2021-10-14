@@ -9,6 +9,8 @@ import 약속입력란 from 'src/랜딩페이지/컴포넌트/약속입력란';
 
 import 스타일 from 'styles/랜딩페이지.module.css';
 
+import 로고 from 'public/logo.png';
+
 export default function 랜딩페이지(): JSX.Element {
   const [신청하는사람, 신청하는사람_수정] = useState<string>('');
   const [신청받는사람, 신청받는사람_수정] = useState<string>('');
@@ -35,14 +37,14 @@ export default function 랜딩페이지(): JSX.Element {
       <header className={스타일.헤더}>
         <h1 className={스타일.제목}>
           <Image
-            src="/logo.png"
+            src={로고}
             alt=""
             width={60}
             height={60}
           />
           섹스 신청서
           <Image
-            src="/logo.png"
+            src={로고}
             alt=""
             width={60}
             height={60}
