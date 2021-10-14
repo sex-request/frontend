@@ -32,7 +32,7 @@ module.exports = withMDX({
 	pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 	images: {
     loader: 'imgix',
-    path: isProduction ? productionURL : '/',
+    path: isProduction ? productionURL : 'http://localhost:3000/',
   },
   assetPrefix: isProduction ? productionURL : '',
   webpack: (config, { webpack }) => {
