@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { useState } from 'react';
+
+import 선택사항입력란 from './선택사항입력란';
+
+<Meta
+  title="랜딩페이지/컴포넌트/선택사항입력란"
+  component={선택사항입력란}
+/>
+
+<Canvas>
+  <Story
+    name="샘플"
+    args={{
+      type: 'text',
+      placeholder: 'placeholder',
+      labelText: '라벨',
+    }}
+    argTypes={{
+      type: {
+        options: ['text', 'date', 'time', 'number'],
+        control: { type: 'radio' }
+      },
+    }}
+  >
+    {((args) => {
+      const [value, setValue] = useState('');
+      const [활성화, 활성화_수정] = useState(true);
+      
+      return (
+        <선택사항입력란
+          {...args}
+          value={value}
+          onChange={setValue}
+          disabled={!활성화}
+          onChecked={활성화_수정}
+        />
+      );
+    }).bind({})}
+  </Story>
+</Canvas>
