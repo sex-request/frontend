@@ -50,6 +50,7 @@ module.exports = {
     '/.next/',
     '^.+\\.module\\.(css|sass|scss)$',
     'cypress',
+    '.storybook',
 
     'config.js',
     'coverage',
@@ -61,6 +62,7 @@ module.exports = {
     '/.next/',
     '^.+\\.module\\.(css|sass|scss)$',
     'cypress',
+    '.storybook',
 
     '.config.',
     'coverage',
