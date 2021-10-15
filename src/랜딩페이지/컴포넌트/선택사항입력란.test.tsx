@@ -7,12 +7,15 @@ describe('선택사항입력란 컴포넌트', () => {
     const onChecked: () => void = jest.fn();
 
     it('onChecked 함수를 호출합니다.', () => {
-      render(<선택사항입력란
-        value=""
-        disabled={false}
-        onChange={() => {}}
-        onChecked={onChecked}
-      />);
+      render((
+        <선택사항입력란
+          value=""
+          disabled={false}
+          labelText="날짜"
+          onChange={() => {}}
+          onChecked={onChecked}
+        />
+      ));
 
       fireEvent.click(
         screen.getByRole('checkbox'),
@@ -26,14 +29,17 @@ describe('선택사항입력란 컴포넌트', () => {
     const onChange: () => void = jest.fn();
 
     it('onChange 함수를 호출합니다.', () => {
-      render(<선택사항입력란
-        type="time"
-        value=""
-        placeholder="15:45"
-        disabled={false}
-        onChange={onChange}
-        onChecked={() => {}}
-      />);
+      render((
+        <선택사항입력란
+          type="time"
+          value=""
+          placeholder="15:45"
+          labelText="날짜"
+          disabled={false}
+          onChange={onChange}
+          onChecked={() => {}}
+        />
+      ));
 
       fireEvent.change(
         screen.getByDisplayValue(''),

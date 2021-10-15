@@ -3,6 +3,7 @@ interface Props {
   placeholder?: string;
   value: string;
   disabled: boolean;
+  labelText: string;
   onChange: (value: string) => void;
   onChecked: (checked: boolean) => void;
 }
@@ -12,6 +13,7 @@ export default function 선택사항입력란({
   placeholder = '',
   value,
   disabled,
+  labelText,
   onChange,
   onChecked,
 }: Props): JSX.Element {
@@ -22,8 +24,11 @@ export default function 선택사항입력란({
         checked={!disabled}
         onChange={(e) => onChecked(e.target.checked)}
       />
-      날짜
+      <label htmlFor={labelText}>
+        {labelText}
+      </label>
       <input
+        id={labelText}
         type={type}
         value={value}
         disabled={disabled}

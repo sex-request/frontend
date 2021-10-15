@@ -62,6 +62,7 @@ export default function 랜딩페이지(): JSX.Element {
           <선택사항입력란
             type="date"
             value={날짜}
+            labelText="날짜"
             onChange={날짜_수정}
             disabled={!날짜_사용함}
             onChecked={날짜_사용함_수정}
@@ -69,6 +70,7 @@ export default function 랜딩페이지(): JSX.Element {
           <선택사항입력란
             value={시간}
             type="time"
+            labelText="시간"
             onChange={시간_수정}
             disabled={!시간_사용함}
             onChecked={시간_사용함_수정}
@@ -76,6 +78,7 @@ export default function 랜딩페이지(): JSX.Element {
           <선택사항입력란
             value={장소}
             placeholder="예: 우리집❤️"
+            labelText="장소"
             onChange={장소_수정}
             disabled={!장소_사용함}
             onChecked={장소_사용함_수정}
