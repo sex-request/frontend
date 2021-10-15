@@ -1,5 +1,5 @@
 interface Props {
-  type: string;
+  type?: string;
   placeholder?: string;
   value: string;
   disabled: boolean;
@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function 선택사항입력란({
-  type,
+  type = 'text',
   placeholder = '',
   value,
   disabled,

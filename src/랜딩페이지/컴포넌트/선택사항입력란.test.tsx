@@ -8,7 +8,6 @@ describe('선택사항입력란 컴포넌트', () => {
 
     it('onChecked 함수를 호출합니다.', () => {
       render(<선택사항입력란
-        type="time"
         value=""
         disabled={false}
         onChange={() => {}}
