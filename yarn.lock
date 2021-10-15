@@ -2703,6 +2703,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-postcss@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@storybook/addon-postcss@npm:2.0.0"
+  dependencies:
+    "@storybook/node-logger": ^6.1.14
+    css-loader: ^3.6.0
+    postcss: ^7.0.35
+    postcss-loader: ^4.2.0
+    style-loader: ^1.3.0
+  checksum: 3dee9003a5fa3d6348c093308b3264d58d415be06b01092c1f62e52a22c3a44f4575a49f3960fbc0f211de0608728fdb139fa0501897221fed5ffc04cd11fa09
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-toolbars@npm:6.3.12":
   version: 6.3.12
   resolution: "@storybook/addon-toolbars@npm:6.3.12"
@@ -3246,7 +3259,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/node-logger@npm:6.3.12":
+"@storybook/node-logger@npm:6.3.12, @storybook/node-logger@npm:^6.1.14":
   version: 6.3.12
   resolution: "@storybook/node-logger@npm:6.3.12"
   dependencies:
@@ -7947,7 +7960,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-loader@npm:^2.16.0":
+"esbuild-loader@npm:^2.10.0, esbuild-loader@npm:^2.16.0":
   version: 2.16.0
   resolution: "esbuild-loader@npm:2.16.0"
   dependencies:
@@ -9249,6 +9262,7 @@ __metadata:
     "@storybook/addon-docs": ^6.3.12
     "@storybook/addon-essentials": ^6.3.12
     "@storybook/addon-links": ^6.3.12
+    "@storybook/addon-postcss": ^2.0.0
     "@storybook/react": ^6.3.12
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^12.1.1
@@ -9289,6 +9303,7 @@ __metadata:
     react-dom: 17.0.2
     sharp: ^0.29.1
     start-server-and-test: ^1.14.0
+    storybook-addon-turbo-build: ^1.0.1
     supertest: ^6.1.6
     typescript: 4.4.3
     webpack: ^5.58.1
@@ -14242,7 +14257,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss@npm:^7.0.14, postcss@npm:^7.0.26, postcss@npm:^7.0.32, postcss@npm:^7.0.36, postcss@npm:^7.0.5, postcss@npm:^7.0.6":
+"postcss@npm:^7.0.14, postcss@npm:^7.0.26, postcss@npm:^7.0.32, postcss@npm:^7.0.35, postcss@npm:^7.0.36, postcss@npm:^7.0.5, postcss@npm:^7.0.6":
   version: 7.0.39
   resolution: "postcss@npm:7.0.39"
   dependencies:
@@ -16287,6 +16302,15 @@ resolve@^2.0.0-next.3:
     react: ^16.8.0 || ^17.0.0
     react-dom: ^16.8.0 || ^17.0.0
   checksum: 8896a144897ea0e04b5bbaa2ff8e1065009d04b5ee93206396971af0960d470a9de406b9df67016241a02b0fccd4a8de95276ff30165555aca503625aca0283b
+  languageName: node
+  linkType: hard
+
+"storybook-addon-turbo-build@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "storybook-addon-turbo-build@npm:1.0.1"
+  dependencies:
+    esbuild-loader: ^2.10.0
+  checksum: a33fe6863af21889280ad12f40b90c025921a52f8015610ee4e98aecb3fa8a8e229f920b6986355fbffad4a67e155810f85b00aa9ae80dd5dbe9bf756925c378
   languageName: node
   linkType: hard
 
