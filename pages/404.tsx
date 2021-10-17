@@ -1,3 +1,7 @@
-export default function NotFound(): JSX.Element {
-  return <h1>Not Found</h1>;
-}
+import type { NextPage } from 'next';
+
+import Error from 'next/error';
+
+const NotFoundPage: NextPage = () => <Error statusCode={404} />;
+
+export default NotFoundPage;
