@@ -52,9 +52,7 @@
         "tsx": "never"
       }
    ],
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["error"],
-    "react/jsx-pascal-case": "off",
+    "react/jsx-pascal-case": "off", // for Korean
     "react/require-default-props": "off"
   }
 }
