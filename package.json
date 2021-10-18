@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "version": "1.1.17",
+  "version": "1.1.18",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -14,8 +14,8 @@
     "cypress:headless": "cypress run",
     "e2e": "start-server-and-test dev http://localhost:3000 cypress",
     "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -s ./public/ -p 6006",
+    "build-storybook": "build-storybook -s ./public/",
     "postinstall": "husky install"
   },
   "dependencies": {
