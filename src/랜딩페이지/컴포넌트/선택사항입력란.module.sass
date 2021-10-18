@@ -1,0 +1,47 @@
+.컨테이너
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-start
+  margin-bottom: 0.5rem
+
+.체크박스
+  appearance: none
+  width: 1rem
+  height: 1rem
+  margin-right: 0.4rem
+
+  &::after
+    content: ""
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 1rem
+    height: 1rem
+    font-size: 1rem
+    color: hotpink
+    background-color: transparent
+    border: 0.2rem solid pink
+    border-radius: 0.2rem
+    box-sizing: border-box
+
+  &:checked::after
+    content: "✔️"
+    background-color: pink
+
+.입력란
+  flex: 1
+  max-width: 67%
+  height: 2rem
+  margin-left: 1rem
+  padding: 0.5rem 1rem
+  background-color: pink
+  border: none
+  border-radius: 0.5rem
+
+  &:disabled
+    color: rgb(175, 175, 175)
+    background-color: rgb(175, 175, 175)
+
+textarea.입력란
+  height: 4rem

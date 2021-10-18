@@ -1,3 +1,5 @@
+import 스타일 from 'src/랜딩페이지/컴포넌트/선택사항입력란.module.sass';
+
 interface Props {
   type?: string;
   placeholder?: string;
@@ -21,6 +23,7 @@ export default function 선택사항입력란({
 
   const CheckBox = () => (
     <input
+      className={스타일.체크박스}
       type="checkbox"
       checked={!disabled}
       onChange={(e) => onChecked(e.target.checked)}
@@ -33,6 +36,7 @@ export default function 선택사항입력란({
   );
   const Textarea = () => (
     <textarea
+      className={스타일.입력란}
       id={labelText}
       value={value}
       disabled={disabled}
@@ -42,6 +46,7 @@ export default function 선택사항입력란({
   );
   const Input = () => (
     <input
+      className={스타일.입력란}
       id={labelText}
       type={type}
       value={value}
@@ -53,10 +58,10 @@ export default function 선택사항입력란({
   const InputField = () => (isTextarea ? <Textarea /> : <Input />);
 
   return (
-    <div>
+    <section className={스타일.컨테이너}>
       <CheckBox />
       <Label />
       <InputField />
-    </div>
+    </section>
   );
 }
