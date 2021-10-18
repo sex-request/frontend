@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
-import 약속입력란 from 'src/랜딩페이지/컴포넌트/약속입력란';
 import 선택사항입력란 from 'src/랜딩페이지/컴포넌트/선택사항입력란';
 
 import 스타일 from 'styles/랜딩페이지.module.css';
@@ -83,8 +82,10 @@ export default function 랜딩페이지(): JSX.Element {
             disabled={!장소_사용함}
             onChecked={장소_사용함_수정}
           />
-          <약속입력란
-            약속={약속}
+          <선택사항입력란
+            value={약속}
+            placeholder="예: 10분 이상 하겠습니다."
+            labelText="약속"
             onChange={약속_수정}
             disabled={!약속_사용함}
             onChecked={약속_사용함_수정}
