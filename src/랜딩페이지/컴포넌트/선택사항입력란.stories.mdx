@@ -8,34 +8,86 @@ import 선택사항입력란 from './선택사항입력란';
   component={선택사항입력란}
 />
 
+export const defaultArgs = {
+  placeholder: 'placeholder',
+  labelText: 'label',
+};
+const argTypes = {
+  type: {
+    options: ['text', 'date', 'time', 'number', 'textarea'],
+    control: { type: 'radio' }
+  },
+};
+const Template = (args) => {
+  const [value, setValue] = useState('');
+  const [활성화, 활성화_수정] = useState(true);
+  return (
+    <선택사항입력란
+      {...args}
+      value={value}
+      onChange={setValue}
+      disabled={!활성화}
+      onChecked={활성화_수정}
+    />
+  );
+};
+
+# type: text
+
 <Canvas>
   <Story
-    name="샘플"
+    name="text"
     args={{
-      type: 'text',
-      placeholder: 'placeholder',
-      labelText: '라벨',
+      ...defaultArgs,
+      type: "text",
     }}
-    argTypes={{
-      type: {
-        options: ['text', 'date', 'time', 'number'],
-        control: { type: 'radio' }
-      },
-    }}
+    argTypes={argTypes}
   >
-    {((args) => {
-      const [value, setValue] = useState('');
-      const [활성화, 활성화_수정] = useState(true);
-      
-      return (
-        <선택사항입력란
-          {...args}
-          value={value}
-          onChange={setValue}
-          disabled={!활성화}
-          onChecked={활성화_수정}
-        />
-      );
-    }).bind({})}
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# type: date
+
+<Canvas>
+  <Story
+    name="date"
+    args={{
+      ...defaultArgs,
+      type: "date",
+    }}
+    argTypes={argTypes}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# type: time
+
+<Canvas>
+  <Story
+    name="time"
+    args={{
+      ...defaultArgs,
+      type: "time",
+    }}
+    argTypes={argTypes}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# type: textarea
+
+<Canvas>
+  <Story
+    name="textarea"
+    args={{
+      ...defaultArgs,
+      type: "textarea",
+    }}
+    argTypes={argTypes}
+  >
+    {Template.bind({})}
   </Story>
 </Canvas>
