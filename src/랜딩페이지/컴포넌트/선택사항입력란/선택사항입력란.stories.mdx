@@ -1,7 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { useState } from 'react';
 
-import 선택사항입력란 from './선택사항입력란';
+import 선택사항입력란 from 'src/랜딩페이지/컴포넌트/선택사항입력란';
 
 <Meta
   title="랜딩페이지/컴포넌트/선택사항입력란"
@@ -10,7 +10,6 @@ import 선택사항입력란 from './선택사항입력란';
 
 export const defaultArgs = {
   placeholder: 'placeholder',
-  labelText: 'label',
 };
 const argTypes = {
   type: {
@@ -21,6 +20,7 @@ const argTypes = {
 const Template = (args) => {
   const [value, setValue] = useState('');
   const [활성화, 활성화_수정] = useState(true);
+  console.log(args);
   return (
     <선택사항입력란
       {...args}
@@ -36,10 +36,11 @@ const Template = (args) => {
 
 <Canvas>
   <Story
-    name="text"
+    name="장소"
     args={{
       ...defaultArgs,
-      type: "text",
+      type: 'text',
+      labelText: '장소',
     }}
     argTypes={argTypes}
   >
@@ -51,10 +52,11 @@ const Template = (args) => {
 
 <Canvas>
   <Story
-    name="date"
+    name="날짜"
     args={{
       ...defaultArgs,
-      type: "date",
+      type: 'date',
+      labelText: '날짜',
     }}
     argTypes={argTypes}
   >
@@ -66,10 +68,11 @@ const Template = (args) => {
 
 <Canvas>
   <Story
-    name="time"
+    name="시간"
     args={{
       ...defaultArgs,
-      type: "time",
+      type: 'time',
+      labelText: '시간',
     }}
     argTypes={argTypes}
   >
@@ -81,10 +84,11 @@ const Template = (args) => {
 
 <Canvas>
   <Story
-    name="textarea"
+    name="약속"
     args={{
       ...defaultArgs,
-      type: "textarea",
+      type: 'textarea',
+      labelText: '약속',
     }}
     argTypes={argTypes}
   >
