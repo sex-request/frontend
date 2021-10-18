@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
 import 선택사항입력란 from 'src/랜딩페이지/컴포넌트/선택사항입력란';
@@ -7,6 +7,20 @@ import 선택사항입력란 from 'src/랜딩페이지/컴포넌트/선택사항
 import 스타일 from 'styles/랜딩페이지.module.css';
 
 import 로고 from 'public/logo.png';
+
+export function 기본값_설정(
+  값: string | null,
+  값_변경_함수: (값: string) => void,
+  사용_여부_함수: ((사용_여부: boolean) => void) | null = null,
+) {
+  if (값) {
+    값_변경_함수(값);
+  }
+
+  if (사용_여부_함수) {
+    사용_여부_함수(true);
+  }
+}
 
 export default function 랜딩페이지(): JSX.Element {
   const [신청하는사람, 신청하는사람_수정] = useState<string>('');
@@ -19,6 +33,17 @@ export default function 랜딩페이지(): JSX.Element {
   const [장소_사용함, 장소_사용함_수정] = useState<boolean>(true);
   const [약속, 약속_수정] = useState<string>('');
   const [약속_사용함, 약속_사용함_수정] = useState<boolean>(true);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+
+    기본값_설정(params.get('from'), 신청하는사람_수정);
+    기본값_설정(params.get('to'), 신청받는사람_수정);
+    기본값_설정(params.get('time'), 시간_수정, 시간_사용함_수정);
+    기본값_설정(params.get('date'), 날짜_수정, 날짜_사용함_수정);
+    기본값_설정(params.get('location'), 장소_수정, 장소_사용함_수정);
+    기본값_설정(params.get('promise'), 약속_수정, 약속_사용함_수정);
+  }, []);
 
   return (
     <div className={스타일.컨테이너}>
@@ -33,19 +58,9 @@ export default function 랜딩페이지(): JSX.Element {
 
       <header className={스타일.헤더}>
         <h1 className={스타일.제목}>
-          <Image
-            src={로고}
-            alt=""
-            width={60}
-            height={60}
-          />
+          <Image src={로고} alt="" width={60} height={60} />
           섹스 신청서
-          <Image
-            src={로고}
-            alt=""
-            width={60}
-            height={60}
-          />
+          <Image src={로고} alt="" width={60} height={60} />
         </h1>
       </header>
 

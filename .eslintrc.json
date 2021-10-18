@@ -53,6 +53,7 @@
       }
    ],
     "react/jsx-pascal-case": "off", // for Korean
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "@typescript-eslint/naming-convention": "off"
   }
 }
