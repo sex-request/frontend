@@ -22,6 +22,11 @@
 
 ---
 
+[어플리케이션 링크](https://sex-request.github.io/frontend/)  
+[스토리북 링크](https://sex-request-storybook.netlify.app/)
+
+---
+
 ![섹스 신청서 이미지](./public/inspired_image.jpg)
 
 위 이미지에 영감을 얻어 제작하게 되었습니다.
