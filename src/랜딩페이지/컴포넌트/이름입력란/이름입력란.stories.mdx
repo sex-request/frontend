@@ -8,21 +8,49 @@ import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
   component={이름입력란}
 />
 
+export const flexCenter = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}
+
+export const containerStyle = {
+  ...flexCenter,
+  flexDirection: 'column',
+  overflow: 'hidden',
+  position: 'relative',
+  background: '#ffe3e8',
+};
+
 export const Template = (args) => {
-  const [value, setValue] = useState('');
+  const [신청하는사람, 신청하는사람_수정] = useState('');
+  const [신청받는사람, 신청받는사람_수정] = useState('');
   return (
-    <이름입력란
-      {...args}
-      value={value}
-      onChange={setValue}
-    />
+    <section
+      style={containerStyle}
+    >
+      <h2 style={{ ...flexCenter, flexDirection: 'row' }}>
+        <이름입력란 value={신청하는사람} onChange={신청하는사람_수정} />
+        가
+        <이름입력란 value={신청받는사람} onChange={신청받는사람_수정} />
+        에게 섹스를 신청합니다.
+      </h2>
+      <p>
+        신청하는사람
+        <strong style={{ margin: '0 1rem' }}>{신청하는사람}</strong>
+        (인)
+      </p>
+      <p>
+        신청받는사람
+        <strong style={{ margin: '0 1rem' }}>{신청받는사람}</strong>
+        (인)
+      </p>
+    </section>
   );
 };
 
 <Canvas>
-  <Story
-    name="text"
-  >
+  <Story name="예제">
     {Template.bind({})}
   </Story>
 </Canvas>
