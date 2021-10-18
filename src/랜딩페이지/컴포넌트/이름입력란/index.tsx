@@ -1,4 +1,4 @@
-import 스타일 from 'src/랜딩페이지/컴포넌트/이름입력란.module.sass';
+import 스타일 from 'src/랜딩페이지/컴포넌트/이름입력란/이름입력란.module.sass';
 
 interface Props {
   value: string;
