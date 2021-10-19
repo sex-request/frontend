@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "version": "1.1.19",
+  "version": "1.1.24",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,6 +19,8 @@
     "postinstall": "husky install"
   },
   "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^11.1.2",
     "next": "11.1.2",

@@ -7,6 +7,7 @@
 ![Next.JS](https://img.shields.io/badge/next.js-TypeScript-007ACC?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![Storybook](https://img.shields.io/badge/storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)
 ![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![Emotion](https://img.shields.io/badge/👩‍🎤_Emotion-CC6699?style=for-the-badge&logo=emotion&logoColor=white)
 ![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)
 ![Cypress](https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white)
 ![ESLint](https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white)
@@ -24,6 +25,13 @@
 
 [어플리케이션 링크](https://sex-request.github.io/frontend/)  
 [스토리북 링크](https://sex-request-storybook.netlify.app/)
+
+---
+
+## Special thanks to
+
+- @naninyang 님의 global style을 사용했습니다.
+- @kkweon 님이 URL Query String 으로 입력칸들을 채울 수 있는 아이디어를 기능으로 넣어주셨습니다.
 
 ---
 
