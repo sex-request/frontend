@@ -14,6 +14,7 @@ const GlobalStyle = () => (
       }
       
       body {
+        margin: 0;
         background-color: #F6F6F6;
         font-size: 1rem;
         font-size: 16px;

@@ -1,5 +1,7 @@
 import * as NextImage from 'next/image';
 
+import GlobalStyle from '../src/공통/GlobalStyle';
+
 const OriginalNextImage = NextImage.default;
 
 Object.defineProperty(NextImage, 'default', {
@@ -12,6 +14,15 @@ Object.defineProperty(NextImage, 'default', {
     />
   ),
 });
+
+export const decorators = [
+  (Story) => (
+    <>
+      <GlobalStyle />
+      <Story />
+    </>
+  ),
+];
 
 export const parameters = {
   controls: {

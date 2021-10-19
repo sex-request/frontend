@@ -1,5 +1,9 @@
+/** @jsx jsx */
+
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { useState } from 'react';
+import styled from '@emotion/styled';
+import { jsx, css } from '@emotion/react';
 
 import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
 
@@ -8,44 +12,54 @@ import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
   component={이름입력란}
 />
 
-export const flexCenter = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}
+export const flexCenter = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
-export const containerStyle = {
-  ...flexCenter,
-  flexDirection: 'column',
-  overflow: 'hidden',
-  position: 'relative',
-  background: '#ffe3e8',
-};
+export const Section = styled.section`
+  ${flexCenter}
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: #ffe3e8;
+`;
+
+export const Heading = styled.h2`
+  ${flexCenter}
+  flex-direction: row;
+  margin-bottom: 2rem;
+`;
+
+export const Name = styled.strong`
+  margin: 0 1rem;
+`;
 
 export const Template = (args) => {
   const [신청하는사람, 신청하는사람_수정] = useState('');
   const [신청받는사람, 신청받는사람_수정] = useState('');
   return (
-    <section
-      style={containerStyle}
-    >
-      <h2 style={{ ...flexCenter, flexDirection: 'row' }}>
+    <Section>
+      <Heading>
         <이름입력란 value={신청하는사람} onChange={신청하는사람_수정} />
         가
         <이름입력란 value={신청받는사람} onChange={신청받는사람_수정} />
         에게 섹스를 신청합니다.
-      </h2>
+      </Heading>
       <p>
         신청하는사람
-        <strong style={{ margin: '0 1rem' }}>{신청하는사람}</strong>
+        <Name>{신청하는사람}</Name>
         (인)
       </p>
       <p>
         신청받는사람
-        <strong style={{ margin: '0 1rem' }}>{신청받는사람}</strong>
+        <Name>{신청받는사람}</Name>
         (인)
       </p>
-    </section>
+    </Section>
   );
 };
 
