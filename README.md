@@ -30,8 +30,8 @@
 
 ## Special thanks to
 
-- @naninyang 님의 global style을 사용했습니다.
-- @kkweon 님이 URL Query String 으로 입력칸들을 채울 수 있는 아이디어를 기능으로 넣어주셨습니다.
+- [@naninyang](https://github.com/naninyang) 님의 global style을 사용했습니다.
+- [@kkweon](https://github.com/kkweon) 님이 URL Query String 으로 입력칸들을 채울 수 있는 아이디어를 기능으로 넣어주셨습니다.
 
 ---
 
