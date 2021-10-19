@@ -1,6 +1,6 @@
 import * as NextImage from 'next/image';
 
-import GlobalStyle from '../src/공통/GlobalStyle';
+import GlobalStyle from '../src/공통/Global.style';
 
 const OriginalNextImage = NextImage.default;
 
