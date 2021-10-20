@@ -54,7 +54,6 @@ module.exports = {
 
     'config.js',
     'coverage',
-    '.style.',
 
     '_document.tsx',
     '_app.tsx',
@@ -73,7 +72,6 @@ module.exports = {
     '.config.',
     'coverage',
     '/stories/',
-    '.style.',
     
     '_document.tsx',
     '_app.tsx',
