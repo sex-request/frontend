@@ -1,10 +1,16 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 
 import Home, { 기본값_설정 } from 'pages/index';
 
+jest.mock('html-to-image', () => ({
+  toPng: async () => {},
+}));
+
 test('랜딩페이지', () => {
   render(<Home />);
+
+  fireEvent.click(screen.getByRole('button', { name: '이미지로 다운로드' }));
 });
 
 test('값을 확인후 상태를 변경함', () => {
