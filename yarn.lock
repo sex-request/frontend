@@ -9454,6 +9454,7 @@ __metadata:
     eslint-plugin-react: ^7.26.1
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-testing-library: ^4.12.4
+    html-to-image: ^1.9.0
     husky: ^7.0.0
     identity-obj-proxy: ^3.0.0
     jest: ^27.2.5
@@ -10306,6 +10307,13 @@ fsevents@^1.2.7:
   version: 3.1.0
   resolution: "html-tags@npm:3.1.0"
   checksum: 67587f2d4022390d7bc34b1313773ecb0b0e0c79fb331aa3e20023eb4c862c7188a1ff775d126fcd75f4e4f08f956666a1c57688c4d24d85a77f9d4b1a42f345
+  languageName: node
+  linkType: hard
+
+"html-to-image@npm:^1.9.0":
+  version: 1.9.0
+  resolution: "html-to-image@npm:1.9.0"
+  checksum: e4472be2481e85cdf85decdaa04b8acc6d2124ed8957d5fcaa07a6d0c4da4e3084e380793a96abfa1af58029fba100ec8b1a5fed8318c02439923c14377b6f78
   languageName: node
   linkType: hard
 
