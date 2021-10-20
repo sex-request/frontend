@@ -1,14 +1,13 @@
 import {
-  useCallback,
   useEffect,
   useRef,
   useState,
 } from 'react';
 import Image from 'next/image';
-import { toPng } from 'html-to-image';
 
 import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
 import 선택사항입력란 from 'src/랜딩페이지/컴포넌트/선택사항입력란';
+import 이미지로_다운로드 from 'src/랜딩페이지/컴포넌트/이미지로_다운로드';
 
 import 스타일 from 'styles/랜딩페이지.module.css';
 
@@ -52,16 +51,6 @@ export default function 랜딩페이지(): JSX.Element {
   }, []);
 
   const ref = useRef<HTMLDivElement>(null);
-
-  const onButtonClick = useCallback(() => {
-    toPng(ref.current as HTMLElement, { cacheBust: true })
-      .then((dataUrl) => {
-        const link = document.createElement('a');
-        link.download = 'my-image-name.png';
-        link.href = dataUrl;
-        link.click();
-      });
-  }, [ref]);
 
   return (
     <div className={스타일.컨테이너}>
@@ -141,7 +130,7 @@ export default function 랜딩페이지(): JSX.Element {
         </footer>
       </div>
 
-      <button type="button" onClick={onButtonClick}>이미지로 다운로드</button>
+      <이미지로_다운로드 ref={ref} />
     </div>
   );
 }
