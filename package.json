@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "version": "1.1.8",
+  "version": "1.1.33",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -14,16 +14,20 @@
     "cypress:headless": "cypress run",
     "e2e": "start-server-and-test dev http://localhost:3000 cypress",
     "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -s ./public/ -p 6006",
+    "build-storybook": "build-storybook -s ./public/",
     "postinstall": "husky install"
   },
   "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^11.1.2",
+    "html-to-image": "^1.9.0",
     "next": "11.1.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "reactjs-popup": "^2.0.5"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "*",
@@ -34,6 +38,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/runtime": "^7.15.4",
+    "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-docs": "^6.3.12",
@@ -45,6 +50,7 @@
     "@storybook/react": "^6.3.12",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.2",
+    "@types/babel-core": "^6",
     "@types/babel__core": "^7",
     "@types/jest": "^27.0.2",
     "@types/jest-plugin-context": "^2",
@@ -56,6 +62,7 @@
     "@types/testing-library__jest-dom": "^5",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
+    "babel-core": "^6.26.3",
     "babel-jest": "^27.2.5",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.4.0",
@@ -76,12 +83,15 @@
     "husky": "^7.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.2.5",
+    "jest-mdx-loader": "^0.1.1",
     "jest-plugin-context": "^2.9.0",
+    "jest-transformer-mdx": "^3.3.0",
     "sass": "^1.43.2",
     "sass-loader": "^12.2.0",
     "start-server-and-test": "^1.14.0",
     "style-loader": "^3.3.0",
     "supertest": "^6.1.6",
+    "transform-class-properties": "^1.0.0-beta",
     "typescript": "4.4.4"
   }
 }

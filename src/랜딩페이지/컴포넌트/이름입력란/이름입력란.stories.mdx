@@ -1,0 +1,68 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { useState } from 'react';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
+
+import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
+
+<Meta
+  title="랜딩페이지/컴포넌트/이름입력란"
+  component={이름입력란}
+/>
+
+export const flexCenter = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Section = styled.section`
+  ${flexCenter}
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: #ffe3e8;
+`;
+
+export const Heading = styled.h2`
+  ${flexCenter}
+  flex-direction: row;
+  margin-bottom: 2rem;
+`;
+
+export const Name = styled.strong`
+  margin: 0 1rem;
+`;
+
+export const Template = (args) => {
+  const [신청하는사람, 신청하는사람_수정] = useState('');
+  const [신청받는사람, 신청받는사람_수정] = useState('');
+  return (
+    <Section>
+      <Heading>
+        <이름입력란 value={신청하는사람} onChange={신청하는사람_수정} />
+        가
+        <이름입력란 value={신청받는사람} onChange={신청받는사람_수정} />
+        에게 섹스를 신청합니다.
+      </Heading>
+      <p>
+        신청하는사람
+        <Name>{신청하는사람}</Name>
+        (인)
+      </p>
+      <p>
+        신청받는사람
+        <Name>{신청받는사람}</Name>
+        (인)
+      </p>
+    </Section>
+  );
+};
+
+<Canvas>
+  <Story name="예제">
+    {Template.bind({})}
+  </Story>
+</Canvas>

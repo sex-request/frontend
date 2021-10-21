@@ -1,0 +1,97 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { useState } from 'react';
+
+import 선택사항입력란 from 'src/랜딩페이지/컴포넌트/선택사항입력란';
+
+<Meta
+  title="랜딩페이지/컴포넌트/선택사항입력란"
+  component={선택사항입력란}
+/>
+
+export const defaultArgs = {
+  placeholder: 'placeholder',
+};
+const argTypes = {
+  type: {
+    options: ['text', 'date', 'time', 'number', 'textarea'],
+    control: { type: 'radio' }
+  },
+};
+const Template = (args) => {
+  const [value, setValue] = useState('');
+  const [활성화, 활성화_수정] = useState(true);
+  console.log(args);
+  return (
+    <선택사항입력란
+      {...args}
+      value={value}
+      onChange={setValue}
+      disabled={!활성화}
+      onChecked={활성화_수정}
+    />
+  );
+};
+
+# type: text
+
+<Canvas>
+  <Story
+    name="장소"
+    args={{
+      ...defaultArgs,
+      type: 'text',
+      labelText: '장소',
+    }}
+    argTypes={argTypes}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# type: date
+
+<Canvas>
+  <Story
+    name="날짜"
+    args={{
+      ...defaultArgs,
+      type: 'date',
+      labelText: '날짜',
+    }}
+    argTypes={argTypes}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# type: time
+
+<Canvas>
+  <Story
+    name="시간"
+    args={{
+      ...defaultArgs,
+      type: 'time',
+      labelText: '시간',
+    }}
+    argTypes={argTypes}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# type: textarea
+
+<Canvas>
+  <Story
+    name="약속"
+    args={{
+      ...defaultArgs,
+      type: 'textarea',
+      labelText: '약속',
+    }}
+    argTypes={argTypes}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
