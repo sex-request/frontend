@@ -16,7 +16,7 @@ import 조심해주세요 from 'src/랜딩페이지/컴포넌트/조심해주세
 
 import 스타일 from 'styles/랜딩페이지.module.css';
 
-import 로고 from 'public/logo.png';
+import { 로고 } from 'src/assets/img';
 
 export function 기본값_설정(
   값: string | null,
