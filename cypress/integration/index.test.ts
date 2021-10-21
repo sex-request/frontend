@@ -33,4 +33,28 @@ describe('랜딩페이지', () => {
         .should('not.be.empty');
     });
   });
+
+  context('가벼운 성교육 버튼을 클릭했을 때', () => {
+    const 버튼: string = '가벼운 성교육';
+    const 팝업타이틀: string = '가벼운 성교육 시간!';
+
+    it('"가벼운 성교육 시간!" 이라는 팝업이 나타납니다.', () => {
+      cy.visit('http://localhost:3000/');
+      cy.contains('button', 버튼).click();
+
+      cy.contains(팝업타이틀);
+    });
+  });
+
+  context('조심해주세요 버튼을 클릭했을 때', () => {
+    const 버튼: string = '조심해주세요';
+    const 팝업타이틀: string = '이용하실 때 주의해주세요!';
+
+    it('"이용하실 때 주의해주세요!" 이라는 팝업이 나타납니다.', () => {
+      cy.visit('http://localhost:3000/');
+      cy.contains('button', 버튼).click();
+
+      cy.contains(팝업타이틀);
+    });
+  });
 });
