@@ -8,6 +8,7 @@ import Image from 'next/image';
 import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
 import 선택사항입력란 from 'src/랜딩페이지/컴포넌트/선택사항입력란';
 import 이미지로_다운로드 from 'src/랜딩페이지/컴포넌트/이미지로_다운로드';
+import 깃허브로가기 from 'src/랜딩페이지/컴포넌트/깃허브로가기';
 import 팝업버튼 from 'src/공통/컴포넌트/팝업버튼';
 
 import 가벼운성교육 from 'src/랜딩페이지/컴포넌트/가벼운성교육.mdx';
@@ -58,16 +59,9 @@ export default function 랜딩페이지(): JSX.Element {
 
   return (
     <div className={스타일.컨테이너}>
-      <a
-        href="https://github.com/sex-request/frontend"
-        className={스타일.깃허브로_가기}
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-      >
-        Go To Github
-      </a>
+      <깃허브로가기 />
 
-      <div id="id" ref={ref} style={{ backgroundColor: '#ffe3e8', padding: '4rem' }}>
+      <div ref={ref} style={{ backgroundColor: '#ffe3e8', padding: '4rem' }}>
         <header className={스타일.헤더}>
           <h1 className={스타일.제목}>
             <Image src={로고} alt="" width={60} height={60} />
