@@ -27,12 +27,6 @@ export const Section = styled.section`
   background: ${팔레트.배경색};
 `;
 
-export const Heading = styled.h2`
-  ${flexCenter}
-  flex-direction: row;
-  margin-bottom: 2rem;
-`;
-
 export const Name = styled.strong`
   margin: 0 1rem;
 `;
@@ -42,12 +36,12 @@ export const Template = (args) => {
   const [신청받는사람, 신청받는사람_수정] = useState('');
   return (
     <Section>
-      <Heading>
-        <이름입력란 value={신청하는사람} onChange={신청하는사람_수정} />
-        가
-        <이름입력란 value={신청받는사람} onChange={신청받는사람_수정} />
-        에게 섹스를 신청합니다.
-      </Heading>
+      <이름입력란
+        신청하는사람={신청하는사람}
+        신청하는사람_수정={신청하는사람_수정}
+        신청받는사람={신청받는사람}
+        신청받는사람_수정={신청받는사람_수정}
+      />
       <p>
         신청하는사람
         <Name>{신청하는사람}</Name>

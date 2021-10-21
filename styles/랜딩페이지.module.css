@@ -10,15 +10,6 @@
   background: #ffe3e8;
 }
 
-.이름입력란 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-
 .이름입력란 input:first-child {
   margin-left: 0;
 }
