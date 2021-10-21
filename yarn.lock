@@ -9462,6 +9462,7 @@ __metadata:
     next: 11.1.2
     react: 17.0.2
     react-dom: 17.0.2
+    reactjs-popup: ^2.0.5
     sass: ^1.43.2
     sass-loader: ^12.2.0
     start-server-and-test: ^1.14.0
@@ -15140,6 +15141,16 @@ fsevents@^1.2.7:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
   checksum: b254cc17ce3011788330f7bbf383ab653c6848902d7936a87b09d835d091e3f295f7e9dd1597c6daac5dc80f90e778c8230218ba8ad599f74adcc11e33b9d61b
+  languageName: node
+  linkType: hard
+
+"reactjs-popup@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "reactjs-popup@npm:2.0.5"
+  peerDependencies:
+    react: ">=16"
+    react-dom: ">=16"
+  checksum: 7b9ebd49e66fb936e85cd4e7a3713cdf903e95f802e5783963f1f9c000d2f8bdb7e4b9967756677238b2fcd9c07637282f2a037403374931ba42865ffffe60e6
   languageName: node
   linkType: hard
 
