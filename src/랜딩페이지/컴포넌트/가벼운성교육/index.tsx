@@ -3,15 +3,10 @@ import 'reactjs-popup/dist/index.css';
 import styled from '@emotion/styled';
 
 import 가벼운성교육 from 'src/랜딩페이지/컴포넌트/가벼운성교육/가벼운성교육.mdx';
+import 버튼 from 'src/공통/컴포넌트/버튼.style';
 
 const 컨테이너 = styled.section`
   background: #ffe3e8;
-`;
-const Button = styled.button.bind({ type: 'button' })`
-  padding: 0.6rem 1.2rem;
-  background: pink;
-  border: none;
-  border-radius: 0.5rem;
 `;
 const Header = styled.header`
   width: 100%;
@@ -53,7 +48,7 @@ const Footer = styled.div`
   text-align: center;
 `;
 
-const 팝업열기버튼 = () => <Button>가벼운 성교육</Button>;
+const 팝업열기버튼 = () => <버튼>가벼운 성교육</버튼>;
 
 export default function 팝업(): JSX.Element {
   return (
@@ -69,7 +64,7 @@ export default function 팝업(): JSX.Element {
             <가벼운성교육 />
           </Main>
           <Footer>
-            <Button onClick={close}>닫기</Button>
+            <버튼 onClick={close}>닫기</버튼>
           </Footer>
         </컨테이너>
       )}
