@@ -1,21 +1,4 @@
-import styled from '@emotion/styled';
-
-const Footer = styled.footer`
-  width: 14rem;
-  margin: auto;
-`;
-const P = styled.p`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 0.4rem;
-`;
-const Strong = styled.strong`
-  flex: 1;
-  margin: 0 1rem;
-  text-align: center;
-`;
+import { Footer, P, Strong } from 'src/랜딩페이지/컴포넌트/Footer/styles';
 
 interface Props {
   신청하는사람: string;

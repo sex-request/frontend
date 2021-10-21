@@ -47,7 +47,7 @@ export default function 랜딩페이지(): JSX.Element {
     <div className={스타일.컨테이너}>
       <깃허브로가기 />
 
-      <div ref={ref} style={{ backgroundColor: '#ffe3e8', padding: '4rem' }}>
+      <section ref={ref} style={{ backgroundColor: '#ffe3e8', padding: '4rem' }}>
         <Header />
 
         <main>
@@ -98,7 +98,7 @@ export default function 랜딩페이지(): JSX.Element {
           신청하는사람={신청하는사람}
           신청받는사람={신청받는사람}
         />
-      </div>
+      </section>
 
       <section style={{ marginBottom: '1rem' }}>
         <팝업버튼
