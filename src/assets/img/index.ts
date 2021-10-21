@@ -1,1 +1,4 @@
-export * as 로고 from 'src/assets/img/logo.png';
+import logoImage from './logo.png';
+
+export const logo = logoImage;
+export const dummy = '';

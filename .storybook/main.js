@@ -17,7 +17,7 @@ module.exports = {
   webpackFinal: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      "src": path.resolve(__dirname, "../src"),
+      src: path.resolve(__dirname, '../src'),
     };
   
     return config;

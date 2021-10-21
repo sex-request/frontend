@@ -3,10 +3,10 @@ import {
   useRef,
   useState,
 } from 'react';
-import Image from 'next/image';
 
 import 기본값_설정 from 'src/랜딩페이지/서비스/기본값_설정';
-
+import Header from 'src/랜딩페이지/컴포넌트/Header';
+import Footer from 'src/랜딩페이지/컴포넌트/Footer';
 import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
 import 선택사항입력란 from 'src/랜딩페이지/컴포넌트/선택사항입력란';
 import 이미지로_다운로드 from 'src/랜딩페이지/컴포넌트/이미지로_다운로드';
@@ -17,8 +17,6 @@ import 가벼운성교육 from 'src/랜딩페이지/컴포넌트/가벼운성교
 import 조심해주세요 from 'src/랜딩페이지/컴포넌트/조심해주세요.mdx';
 
 import 스타일 from 'styles/랜딩페이지.module.css';
-
-import { 로고 } from 'src/assets/img';
 
 export default function 랜딩페이지(): JSX.Element {
   const [신청하는사람, 신청하는사람_수정] = useState<string>('');
@@ -50,13 +48,7 @@ export default function 랜딩페이지(): JSX.Element {
       <깃허브로가기 />
 
       <div ref={ref} style={{ backgroundColor: '#ffe3e8', padding: '4rem' }}>
-        <header className={스타일.헤더}>
-          <h1 className={스타일.제목}>
-            <Image src={로고} alt="" width={60} height={60} />
-            섹스 신청서
-            <Image src={로고} alt="" width={60} height={60} />
-          </h1>
-        </header>
+        <Header />
 
         <main>
           <h2 className={스타일.이름입력란}>
@@ -102,18 +94,10 @@ export default function 랜딩페이지(): JSX.Element {
           </section>
         </main>
 
-        <footer className={스타일.서명란}>
-          <p>
-            신청하는사람
-            <strong>{신청하는사람}</strong>
-            (인)
-          </p>
-          <p>
-            신청받는사람
-            <strong>{신청받는사람}</strong>
-            (인)
-          </p>
-        </footer>
+        <Footer
+          신청하는사람={신청하는사람}
+          신청받는사람={신청받는사람}
+        />
       </div>
 
       <section style={{ marginBottom: '1rem' }}>

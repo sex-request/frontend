@@ -10,23 +10,6 @@
   background: #ffe3e8;
 }
 
-.헤더 {
-  margin-bottom: 2rem;
-}
-
-.제목 {
-  font-size: 2.5rem;
-}
-
-.제목 * {
-  vertical-align: bottom;
-}
-
-.제목 img {
-  width: 4rem;
-  height: 4rem;
-}
-
 .이름입력란 {
   display: flex;
   flex-direction: row;
@@ -44,16 +27,4 @@
   width: 80%;
   margin: auto;
   margin-bottom: 2rem;
-}
-
-.서명란 p {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.서명란 strong {
-  flex: 1;
-  margin: 0 1rem;
 }
