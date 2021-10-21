@@ -4,9 +4,10 @@ import styled from '@emotion/styled';
 
 import 조심해주세요 from 'src/랜딩페이지/컴포넌트/조심해주세요/조심해주세요.mdx';
 import 버튼 from 'src/공통/컴포넌트/버튼.style';
+import 팔레트 from 'src/공통/팔레트';
 
 const 컨테이너 = styled.section`
-  background: #ffe3e8;
+background: ${팔레트.배경색};
 `;
 const Header = styled.header`
   width: 100%;
