@@ -5,6 +5,8 @@ import {
 } from 'react';
 import Image from 'next/image';
 
+import 기본값_설정 from 'src/랜딩페이지/서비스/기본값_설정';
+
 import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
 import 선택사항입력란 from 'src/랜딩페이지/컴포넌트/선택사항입력란';
 import 이미지로_다운로드 from 'src/랜딩페이지/컴포넌트/이미지로_다운로드';
@@ -17,20 +19,6 @@ import 조심해주세요 from 'src/랜딩페이지/컴포넌트/조심해주세
 import 스타일 from 'styles/랜딩페이지.module.css';
 
 import { 로고 } from 'src/assets/img';
-
-export function 기본값_설정(
-  값: string | null,
-  값_변경_함수: (값: string) => void,
-  사용_여부_함수: ((사용_여부: boolean) => void) | null = null,
-) {
-  if (값) {
-    값_변경_함수(값);
-  }
-
-  if (사용_여부_함수) {
-    사용_여부_함수(true);
-  }
-}
 
 export default function 랜딩페이지(): JSX.Element {
   const [신청하는사람, 신청하는사람_수정] = useState<string>('');
