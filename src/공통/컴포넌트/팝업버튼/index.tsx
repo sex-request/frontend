@@ -2,12 +2,11 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import styled from '@emotion/styled';
 
-import 조심해주세요 from 'src/랜딩페이지/컴포넌트/조심해주세요/조심해주세요.mdx';
-import 버튼 from 'src/공통/컴포넌트/버튼.style';
+import 버튼 from 'src/공통/컴포넌트/버튼';
 import 팔레트 from 'src/공통/팔레트';
 
 const 컨테이너 = styled.section`
-background: ${팔레트.배경색};
+  background: ${팔레트.배경색};
 `;
 const Header = styled.header`
   width: 100%;
@@ -49,9 +48,19 @@ const Footer = styled.div`
   text-align: center;
 `;
 
-const 팝업열기버튼 = () => <버튼>조심해주세요</버튼>;
+interface Props {
+  버튼텍스트: string;
+  헤더텍스트: string;
+  children: string | React.ReactNode;
+}
 
-export default function 팝업(): JSX.Element {
+export default function 팝업({
+  버튼텍스트,
+  헤더텍스트,
+  children,
+}: Props): JSX.Element {
+  const 팝업열기버튼 = () => <버튼>{버튼텍스트}</버튼>;
+
   return (
     <Popup
       trigger={팝업열기버튼}
@@ -60,9 +69,9 @@ export default function 팝업(): JSX.Element {
     >
       {(close: () => void) => (
         <컨테이너>
-          <Header>이용하실 때 주의해주세요!</Header>
+          <Header>{헤더텍스트}</Header>
           <Main>
-            <조심해주세요 />
+            {children}
           </Main>
           <Footer>
             <버튼 onClick={close}>닫기</버튼>

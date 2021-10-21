@@ -8,8 +8,10 @@ import Image from 'next/image';
 import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
 import 선택사항입력란 from 'src/랜딩페이지/컴포넌트/선택사항입력란';
 import 이미지로_다운로드 from 'src/랜딩페이지/컴포넌트/이미지로_다운로드';
-import 가벼운성교육 from 'src/랜딩페이지/컴포넌트/가벼운성교육';
-import 조심해주세요 from 'src/랜딩페이지/컴포넌트/조심해주세요';
+import 팝업버튼 from 'src/공통/컴포넌트/팝업버튼';
+
+import 가벼운성교육 from 'src/랜딩페이지/컴포넌트/가벼운성교육.mdx';
+import 조심해주세요 from 'src/랜딩페이지/컴포넌트/조심해주세요.mdx';
 
 import 스타일 from 'styles/랜딩페이지.module.css';
 
@@ -133,9 +135,19 @@ export default function 랜딩페이지(): JSX.Element {
       </div>
 
       <section style={{ marginBottom: '1rem' }}>
-        <가벼운성교육 />
+        <팝업버튼
+          버튼텍스트="가벼운 성교육"
+          헤더텍스트="가벼운 성교육 시간!"
+        >
+          <가벼운성교육 />
+        </팝업버튼>
         {' '}
-        <조심해주세요 />
+        <팝업버튼
+          버튼텍스트="조심해주세요"
+          헤더텍스트="이용하실 때 주의해주세요!"
+        >
+          <조심해주세요 />
+        </팝업버튼>
       </section>
 
       <section>

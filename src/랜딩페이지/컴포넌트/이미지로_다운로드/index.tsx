@@ -3,7 +3,7 @@ import type { ForwardedRef, RefObject } from 'react';
 import { toPng } from 'html-to-image';
 import { forwardRef, useCallback } from 'react';
 
-import 버튼 from 'src/공통/컴포넌트/버튼.style';
+import 버튼 from 'src/공통/컴포넌트/버튼';
 
 const 이미지로_다운로드 = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
   const onClick = useCallback(() => {
