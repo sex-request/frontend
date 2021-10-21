@@ -8,6 +8,8 @@ import Image from 'next/image';
 import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
 import 선택사항입력란 from 'src/랜딩페이지/컴포넌트/선택사항입력란';
 import 이미지로_다운로드 from 'src/랜딩페이지/컴포넌트/이미지로_다운로드';
+import 가벼운성교육 from 'src/랜딩페이지/컴포넌트/가벼운성교육';
+import 조심해주세요 from 'src/랜딩페이지/컴포넌트/조심해주세요';
 
 import 스타일 from 'styles/랜딩페이지.module.css';
 
@@ -54,16 +56,16 @@ export default function 랜딩페이지(): JSX.Element {
 
   return (
     <div className={스타일.컨테이너}>
-      <div id="id" ref={ref} style={{ backgroundColor: '#ffe3e8', padding: '4rem' }}>
-        <a
-          href="https://github.com/sex-request/frontend"
-          className={스타일.깃허브로_가기}
-          target="_blank"
-          rel="noopener noreferrer nofollow"
-        >
-          Go To Github
-        </a>
+      <a
+        href="https://github.com/sex-request/frontend"
+        className={스타일.깃허브로_가기}
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        Go To Github
+      </a>
 
+      <div id="id" ref={ref} style={{ backgroundColor: '#ffe3e8', padding: '4rem' }}>
         <header className={스타일.헤더}>
           <h1 className={스타일.제목}>
             <Image src={로고} alt="" width={60} height={60} />
@@ -130,7 +132,15 @@ export default function 랜딩페이지(): JSX.Element {
         </footer>
       </div>
 
-      <이미지로_다운로드 ref={ref} />
+      <section style={{ marginBottom: '1rem' }}>
+        <가벼운성교육 />
+        {' '}
+        <조심해주세요 />
+      </section>
+
+      <section>
+        <이미지로_다운로드 ref={ref} />
+      </section>
     </div>
   );
 }

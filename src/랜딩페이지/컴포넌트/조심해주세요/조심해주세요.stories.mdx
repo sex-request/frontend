@@ -1,0 +1,17 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { useState } from 'react';
+
+import 조심해주세요 from 'src/랜딩페이지/컴포넌트/조심해주세요';
+
+<Meta
+  title="랜딩페이지/컴포넌트/조심해주세요"
+  component={조심해주세요}
+/>
+
+export const Template = (args) => (<조심해주세요 />);
+
+<Canvas>
+  <Story name="팝업">
+    {Template.bind({})}
+  </Story>
+</Canvas>
