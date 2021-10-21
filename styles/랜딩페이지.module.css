@@ -10,48 +10,6 @@
   background: #ffe3e8;
 }
 
-.깃허브로_가기 {
-  position: absolute;
-  top: 1.6rem;
-  right: -7.2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 20rem;
-  height: 2.4rem;
-  transform: rotate(45deg);
-  background: pink;
-  border: 0.4rem solid hotpink;
-  outline: 0.4rem solid pink;
-}
-
-.헤더 {
-  margin-bottom: 2rem;
-}
-
-.제목 {
-  font-size: 2.5rem;
-}
-
-.제목 * {
-  vertical-align: bottom;
-}
-
-.제목 img {
-  width: 4rem;
-  height: 4rem;
-}
-
-.이름입력란 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-
 .이름입력란 input:first-child {
   margin-left: 0;
 }
@@ -60,16 +18,4 @@
   width: 80%;
   margin: auto;
   margin-bottom: 2rem;
-}
-
-.서명란 p {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.서명란 strong {
-  flex: 1;
-  margin: 0 1rem;
 }

@@ -3,7 +3,7 @@ import type { ForwardedRef, RefObject } from 'react';
 import { toPng } from 'html-to-image';
 import { forwardRef, useCallback } from 'react';
 
-import Button from 'src/랜딩페이지/컴포넌트/이미지로_다운로드/이미지로_다운로드.style';
+import 버튼 from 'src/공통/컴포넌트/버튼';
 
 const 이미지로_다운로드 = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
   const onClick = useCallback(() => {
@@ -19,9 +19,9 @@ const 이미지로_다운로드 = forwardRef((_, ref: ForwardedRef<HTMLElement>)
   }, [ref]);
 
   return (
-    <Button onClick={onClick}>
+    <버튼 onClick={onClick}>
       이미지로 다운로드
-    </Button>
+    </버튼>
   );
 });
 
