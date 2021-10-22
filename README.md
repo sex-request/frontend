@@ -1,4 +1,4 @@
-# 섹스 신청서 Frontend <img src="./public/logo.png" alt="" style="width: 60px; height: 60px; vertical-align: bottom;" />
+# 섹스 신청서 Frontend <img src="./src/assets/img/logo.png" alt="" style="width: 60px; height: 60px; vertical-align: bottom;" />
 
 ![version](https://img.shields.io/github/package-json/v/sex-request/frontend)
 ![License GPL-3.0](https://img.shields.io/github/license/sex-request/frontend?style=plat)
