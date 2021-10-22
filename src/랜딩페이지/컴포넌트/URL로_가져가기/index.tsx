@@ -24,12 +24,12 @@ export default function URL로_가져가기({
   return (
     <CopyToClipboard text={
         `${현재주소}`
-        + `?from=${신청하는사람}`
-        + `&to=${신청받는사람}`
-        + `&time=${시간}`
-        + `&date=${날짜}`
-        + `&location=${장소}`
-        + `&promise=${약속}`
+        + `?from=${encodeURI(신청하는사람)}`
+        + `&to=${encodeURI(신청받는사람)}`
+        + `&time=${encodeURI(시간)}`
+        + `&date=${encodeURI(날짜)}`
+        + `&location=${encodeURI(장소)}`
+        + `&promise=${encodeURI(약속)}`
       }
     >
       <버튼>URL로 가져가기</버튼>
