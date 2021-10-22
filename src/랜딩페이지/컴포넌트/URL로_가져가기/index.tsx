@@ -2,7 +2,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import 버튼 from 'src/공통/컴포넌트/버튼';
 
-const 현재주소: string = process.env.currentURL || 'http://localhost:3000';
+const 현재주소: string = process.env.NEXT_PUBLIC_BASE_PATH || 'http://localhost:3000';
 
 interface Props {
   신청하는사람: string;

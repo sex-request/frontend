@@ -8,6 +8,10 @@ on:
 jobs:
   deploy-nextjs:
     runs-on: ubuntu-latest
+
+    env:
+      NEXT_PUBLIC_BASE_PATH: ${{ secrets.NEXT_PUBLIC_BASE_PATH }}
+      
     steps:
       - name: Checkout
         uses: actions/checkout@v2
