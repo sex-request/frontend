@@ -7177,6 +7177,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clipboard-polyfill@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "clipboard-polyfill@npm:3.0.3"
+  checksum: 735a1006eac8c7bbde64a23f47eb8ce15e8558591dd1a7bffe11f3f17c68fb6aa1d7c459f51e22348c65539d60e3746b15692fbc9b7930b8e14a22c7ce33948d
+  languageName: node
+  linkType: hard
+
 "cliui@npm:^7.0.2":
   version: 7.0.4
   resolution: "cliui@npm:7.0.4"
@@ -10016,6 +10023,7 @@ __metadata:
     babel-core: ^6.26.3
     babel-jest: ^27.2.5
     babel-loader: ^8.2.2
+    clipboard-polyfill: ^3.0.3
     css-loader: ^6.4.0
     cypress: ^8.6.0
     eslint: 7.32.0

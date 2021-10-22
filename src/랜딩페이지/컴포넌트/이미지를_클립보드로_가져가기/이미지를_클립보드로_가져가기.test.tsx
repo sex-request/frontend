@@ -5,6 +5,7 @@ import 이미지를_클립보드로_가져가기 from 'src/랜딩페이지/컴�
 jest.mock('html-to-image', () => ({
   toBlob: async () => {},
 }));
+jest.mock('clipboard-polyfill');
 
 const ref = { current: document.createElement('a') };
 
