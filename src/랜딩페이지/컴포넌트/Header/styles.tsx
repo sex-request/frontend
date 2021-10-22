@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 export const Header = styled.header`
   margin-bottom: 2rem;
+  text-align: center;
 `;
 
 export const H1 = styled.h1`
