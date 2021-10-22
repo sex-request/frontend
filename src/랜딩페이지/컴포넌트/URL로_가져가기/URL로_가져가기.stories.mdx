@@ -1,0 +1,26 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+import URL로_가져가기 from 'src/랜딩페이지/컴포넌트/URL로_가져가기';
+
+<Meta
+  title="랜딩페이지/컴포넌트/URL로_가져가기"
+  component={URL로_가져가기}
+/>
+
+export const Template = (args) => <URL로_가져가기 {...args} />;
+
+<Canvas>
+  <Story
+    name="버튼"
+    args={{
+      신청하는사람: '신청자',
+      신청받는사람: '받는사람',
+      시간: '15:30',
+      날짜: '2021-10-22',
+      장소: '우리집',
+      약속: '10분 이상 하곘습니다.',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
