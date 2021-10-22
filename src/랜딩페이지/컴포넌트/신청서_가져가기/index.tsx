@@ -1,4 +1,5 @@
 import type { ForwardedRef } from 'react';
+import type { PopupPosition } from 'reactjs-popup/dist/types';
 
 import { forwardRef } from 'react';
 import Popup from 'reactjs-popup';
@@ -16,6 +17,7 @@ interface Props {
   날짜: string;
   장소: string;
   약속: string;
+  position?: PopupPosition;
 }
 
 const 신청서_가져가기 = forwardRef(({
@@ -25,10 +27,11 @@ const 신청서_가져가기 = forwardRef(({
   날짜,
   장소,
   약속,
+  position,
 }: Props, ref: ForwardedRef<HTMLElement>) => (
   <Popup
     trigger={<버튼>신청서 가져가기</버튼>}
-    position="right bottom"
+    position={position || 'right bottom'}
     on="hover"
     closeOnDocumentClick
     mouseLeaveDelay={300}
