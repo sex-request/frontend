@@ -22,12 +22,12 @@ describe('랜딩페이지', () => {
 
   context('이미지로 다운로드 버튼을 누를 때', () => {
     const 다운로드폴더: string = Cypress.config('downloadsFolder');
-    const 버튼_텍스트: string = '이미지로 다운로드';
     const 다운로드한_파일이름: string = path.join(다운로드폴더, '섹스신청서.png');
 
     it('섹스신청서.png 파일을 다운로드 받습니다.', () => {
       cy.visit('http://localhost:3000/');
-      cy.contains('button', 버튼_텍스트).click();
+      cy.contains('button', '신청서 가져가기').click();
+      cy.contains('button', '이미지로 다운로드').click();
 
       cy.readFile(다운로드한_파일이름, { timeout: 15000 })
         .should('not.be.empty');
