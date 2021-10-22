@@ -69,6 +69,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-core", "npm:6.26.3"],
             ["babel-jest", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:27.2.5"],
             ["babel-loader", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:8.2.2"],
+            ["clipboard-polyfill", "npm:3.0.3"],
             ["css-loader", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:6.4.0"],
             ["cypress", "npm:8.6.0"],
             ["eslint", "npm:7.32.0"],
@@ -11537,6 +11538,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["clipboard-polyfill", [
+        ["npm:3.0.3", {
+          "packageLocation": "./.yarn/cache/clipboard-polyfill-npm-3.0.3-e72104ad8d-735a1006ea.zip/node_modules/clipboard-polyfill/",
+          "packageDependencies": [
+            ["clipboard-polyfill", "npm:3.0.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["cliui", [
         ["npm:7.0.4", {
           "packageLocation": "./.yarn/cache/cliui-npm-7.0.4-d6b8a9edb6-ce2e8f578a.zip/node_modules/cliui/",
@@ -15158,6 +15168,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-core", "npm:6.26.3"],
             ["babel-jest", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:27.2.5"],
             ["babel-loader", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:8.2.2"],
+            ["clipboard-polyfill", "npm:3.0.3"],
             ["css-loader", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:6.4.0"],
             ["cypress", "npm:8.6.0"],
             ["eslint", "npm:7.32.0"],
