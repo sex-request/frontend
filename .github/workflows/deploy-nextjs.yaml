@@ -9,14 +9,17 @@ jobs:
   deploy-nextjs:
     runs-on: ubuntu-latest
 
-    env:
-      NEXT_PUBLIC_BASE_PATH: ${{ secrets.NEXT_PUBLIC_BASE_PATH }}
-      
     steps:
       - name: Checkout
         uses: actions/checkout@v2
         with:
           persist-credentials: false
+
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v1
+        with:
+          envkey_NEXT_PUBLIC_BASE_PATH: ${{ secrets.NEXT_PUBLIC_BASE_PATH }}
+          file_name: .env
 
       - name: Install and Build
         uses: actions/setup-node@v2
