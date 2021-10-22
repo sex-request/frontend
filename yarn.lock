@@ -10050,6 +10050,7 @@ __metadata:
     react: 17.0.2
     react-copy-to-clipboard: ^5.0.4
     react-dom: 17.0.2
+    react-toastify: ^8.0.3
     reactjs-popup: ^2.0.5
     sass: ^1.43.2
     sass-loader: ^12.2.0
@@ -15949,6 +15950,18 @@ fsevents@^1.2.7:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0
   checksum: da3d0192825df3d9f27eef33e7eddf928359a7e3e2b01ae7f7f672ecf4e5c1f7a34f27bdde9ccc24e2e9fbe1d1b9dd2a39c7d47323c9bdf63e7b9bd05c325a71
+  languageName: node
+  linkType: hard
+
+"react-toastify@npm:^8.0.3":
+  version: 8.0.3
+  resolution: "react-toastify@npm:8.0.3"
+  dependencies:
+    clsx: ^1.1.1
+  peerDependencies:
+    react: ">=16"
+    react-dom: ">=16"
+  checksum: a428f310bfb7b02dd67559ac6377509fe602e1c85bc831bf079a4694d56b1251e79ef9a4d1b2035a4564690aa4ede7de4886d6fe7ab311fb96dcd15a0e17b051
   languageName: node
   linkType: hard
 
