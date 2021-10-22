@@ -31,7 +31,7 @@ const 신청서_가져가기 = forwardRef(({
 }: Props, ref: ForwardedRef<HTMLElement>) => (
   <Popup
     trigger={<버튼>신청서 가져가기</버튼>}
-    position={position || 'right bottom'}
+    position={position || 'top center'}
     on="hover"
     closeOnDocumentClick
     mouseLeaveDelay={300}
