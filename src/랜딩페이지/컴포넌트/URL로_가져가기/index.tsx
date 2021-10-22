@@ -1,8 +1,7 @@
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import 버튼 from 'src/공통/컴포넌트/버튼';
-
-const 현재주소: string = process.env.NEXT_PUBLIC_BASE_PATH || 'https://sex-request.github.io/frontend';
+import env from 'src/공통/env';
 
 interface Props {
   신청하는사람: string;
@@ -23,7 +22,7 @@ export default function URL로_가져가기({
 }: Props): JSX.Element {
   return (
     <CopyToClipboard text={
-        `${현재주소}`
+        `${env.BASE_URL}`
         + `?from=${encodeURI(신청하는사람)}`
         + `&to=${encodeURI(신청받는사람)}`
         + `&time=${encodeURI(시간)}`
