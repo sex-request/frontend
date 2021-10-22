@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import 버튼 from 'src/공통/컴포넌트/버튼';
@@ -22,21 +21,18 @@ export default function URL로_가져가기({
   장소,
   약속,
 }: Props): JSX.Element {
-  const [text, setText] = useState<string>('');
-
-  const onClick = () => setText(
-    `${현재주소}`
-      + `?from=${신청하는사람}`
-      + `&to=${신청받는사람}`
-      + `&time=${시간}`
-      + `&date=${날짜}`
-      + `&location=${장소}`
-      + `&promise=${약속}`,
-  );
-
   return (
-    <CopyToClipboard text={text}>
-      <버튼 onClick={onClick}>URL로 가져가기</버튼>
+    <CopyToClipboard text={
+        `${현재주소}`
+        + `?from=${신청하는사람}`
+        + `&to=${신청받는사람}`
+        + `&time=${시간}`
+        + `&date=${날짜}`
+        + `&location=${장소}`
+        + `&promise=${약속}`
+      }
+    >
+      <버튼>URL로 가져가기</버튼>
     </CopyToClipboard>
   );
 }
