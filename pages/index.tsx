@@ -7,6 +7,9 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import 기본값_설정 from 'src/랜딩페이지/서비스/기본값_설정';
+import {
+  컨테이너, 신청서, 선택입력영역, 주의사항영역,
+} from 'src/랜딩페이지/styles';
 import Header from 'src/랜딩페이지/컴포넌트/Header';
 import Footer from 'src/랜딩페이지/컴포넌트/Footer';
 import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
@@ -17,8 +20,6 @@ import 신청서_가져가기 from 'src/랜딩페이지/컴포넌트/신청서_�
 
 import 가벼운성교육 from 'src/랜딩페이지/컴포넌트/가벼운성교육.mdx';
 import 조심해주세요 from 'src/랜딩페이지/컴포넌트/조심해주세요.mdx';
-
-import 스타일 from 'styles/랜딩페이지.module.css';
 
 export default function 랜딩페이지(): JSX.Element {
   const [신청하는사람, 신청하는사람_수정] = useState<string>('');
@@ -46,10 +47,10 @@ export default function 랜딩페이지(): JSX.Element {
   const ref = useRef<HTMLDivElement>(null);
 
   return (
-    <div className={스타일.컨테이너}>
+    <컨테이너>
       <깃허브로가기 />
 
-      <section ref={ref} style={{ backgroundColor: '#ffe3e8', padding: '4rem' }}>
+      <신청서 ref={ref}>
         <Header />
 
         <main>
@@ -60,7 +61,7 @@ export default function 랜딩페이지(): JSX.Element {
             신청받는사람_수정={신청받는사람_수정}
           />
 
-          <section className={스타일.선택입력란}>
+          <선택입력영역>
             <선택사항입력란
               type="date"
               value={날짜}
@@ -94,16 +95,16 @@ export default function 랜딩페이지(): JSX.Element {
               disabled={!약속_사용함}
               onChecked={약속_사용함_수정}
             />
-          </section>
+          </선택입력영역>
         </main>
 
         <Footer
           신청하는사람={신청하는사람}
           신청받는사람={신청받는사람}
         />
-      </section>
+      </신청서>
 
-      <section style={{ marginBottom: '1rem' }}>
+      <주의사항영역>
         <팝업버튼
           버튼텍스트="가벼운 성교육"
           헤더텍스트="가벼운 성교육 시간!"
@@ -117,7 +118,7 @@ export default function 랜딩페이지(): JSX.Element {
         >
           <조심해주세요 />
         </팝업버튼>
-      </section>
+      </주의사항영역>
 
       <신청서_가져가기
         ref={ref}
@@ -130,6 +131,6 @@ export default function 랜딩페이지(): JSX.Element {
       />
 
       <ToastContainer />
-    </div>
+    </컨테이너>
   );
 }

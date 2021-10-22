@@ -5,14 +5,14 @@ export const Header = styled.header`
 `;
 
 export const H1 = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2rem;
 
   * {
     vertical-align: bottom;
   }
 
   img {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
 `;
