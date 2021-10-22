@@ -2,6 +2,7 @@ import type { ForwardedRef, RefObject } from 'react';
 
 import { forwardRef, useCallback } from 'react';
 import { toPng } from 'html-to-image';
+import { toast } from 'react-toastify';
 
 import 버튼 from 'src/공통/컴포넌트/버튼';
 
@@ -15,6 +16,7 @@ const 이미지로_다운로드 = forwardRef((_, ref: ForwardedRef<HTMLElement>)
       link.download = '섹스신청서.png';
       link.href = dataUrl;
       link.click();
+      toast('이미지를 다운로드 하였습니다.');
     });
   }, [ref]);
 
