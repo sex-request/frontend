@@ -3,7 +3,7 @@ import env from 'src/공통/env';
 
 export default function 깃허브로가기(): JSX.Element {
   return (
-    <Anchor href={env.BASE_URL}>
+    <Anchor href={env.REPOSITORY_URL}>
       Go To Github
     </Anchor>
   );
