@@ -1,4 +1,9 @@
-import 스타일 from 'src/랜딩페이지/컴포넌트/선택사항입력란/선택사항입력란.module.sass';
+import {
+  Section,
+  CheckBox,
+  Input,
+  Textarea,
+} from 'src/랜딩페이지/컴포넌트/선택사항입력란/styles';
 
 interface Props {
   type?: string;
@@ -21,47 +26,37 @@ export default function 선택사항입력란({
 }: Props): JSX.Element {
   const isTextarea = type === 'textarea';
 
-  const CheckBox = () => (
-    <input
-      className={스타일.체크박스}
-      type="checkbox"
-      checked={!disabled}
-      onChange={(e) => onChecked(e.target.checked)}
-    />
-  );
-  const Label = () => (
-    <label htmlFor={labelText}>
-      {labelText}
-    </label>
-  );
-  const Textarea = () => (
-    <textarea
-      className={스타일.입력란}
-      id={labelText}
-      value={value}
-      disabled={disabled}
-      onChange={(e) => onChange(e.target.value)}
-      placeholder={placeholder}
-    />
-  );
-  const Input = () => (
-    <input
-      className={스타일.입력란}
-      id={labelText}
-      type={type}
-      value={value}
-      disabled={disabled}
-      onChange={(e) => onChange(e.target.value)}
-      placeholder={placeholder}
-    />
-  );
-  const InputField = () => (isTextarea ? <Textarea /> : <Input />);
-
   return (
-    <section className={스타일.컨테이너}>
-      <CheckBox />
-      <Label />
-      <InputField />
-    </section>
+    <Section>
+      <CheckBox
+        checked={!disabled}
+        onChange={(e) => onChecked(e.target.checked)}
+      />
+      <label htmlFor={labelText}>
+        {labelText}
+      </label>
+      {
+        isTextarea
+          ? (
+            <Textarea
+              id={labelText}
+              value={value}
+              disabled={disabled}
+              onChange={(e) => onChange(e.target.value)}
+              placeholder={placeholder}
+            />
+          )
+          : (
+            <Input
+              id={labelText}
+              type={type}
+              value={value}
+              disabled={disabled}
+              onChange={(e) => onChange(e.target.value)}
+              placeholder={placeholder}
+            />
+          )
+      }
+    </Section>
   );
 }
