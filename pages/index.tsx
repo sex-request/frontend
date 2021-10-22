@@ -3,6 +3,8 @@ import {
   useRef,
   useState,
 } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import 기본값_설정 from 'src/랜딩페이지/서비스/기본값_설정';
 import Header from 'src/랜딩페이지/컴포넌트/Header';
@@ -126,6 +128,8 @@ export default function 랜딩페이지(): JSX.Element {
         장소={장소}
         약속={약속}
       />
+
+      <ToastContainer />
     </div>
   );
 }

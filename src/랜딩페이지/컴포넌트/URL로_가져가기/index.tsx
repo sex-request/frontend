@@ -1,5 +1,6 @@
 import { stringify } from 'querystring';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { toast } from 'react-toastify';
 
 import 버튼 from 'src/공통/컴포넌트/버튼';
 import env from 'src/공통/env';
@@ -46,7 +47,7 @@ export default function URL로_가져가기({
     <CopyToClipboard
       text={`${env.BASE_URL}?${쿼리생성(props)}`}
     >
-      <버튼>URL로 가져가기</버튼>
+      <버튼 onClick={() => toast('URL을 클립보드에 복사헀습니다.')}>URL로 가져가기</버튼>
     </CopyToClipboard>
   );
 }
