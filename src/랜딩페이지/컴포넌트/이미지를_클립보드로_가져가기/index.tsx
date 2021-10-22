@@ -5,8 +5,7 @@ import {
   useCallback,
 } from 'react';
 import { toBlob } from 'html-to-image';
-import * as clipboard from 'clipboard-polyfill';
-import { ClipboardItem } from 'clipboard-polyfill';
+import { ClipboardItem, write } from 'clipboard-polyfill';
 
 import 버튼 from 'src/공통/컴포넌트/버튼';
 
@@ -15,7 +14,7 @@ const 이미지를_클립보드로_가져가기 = forwardRef((_, ref: ForwardedR
     (ref as RefObject<HTMLElement>).current as HTMLElement,
     { cacheBust: true },
   )
-    .then((dataUrl) => clipboard.write([
+    .then((dataUrl) => write([
       new ClipboardItem({
         'image/png': dataUrl as Blob,
       }),
