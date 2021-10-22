@@ -68,8 +68,8 @@ export default function 랜딩페이지(): JSX.Element {
               onChecked={날짜_사용함_수정}
             />
             <선택사항입력란
-              value={시간}
               type="time"
+              value={시간}
               labelText="시간"
               onChange={시간_수정}
               disabled={!시간_사용함}
@@ -84,6 +84,7 @@ export default function 랜딩페이지(): JSX.Element {
               onChecked={장소_사용함_수정}
             />
             <선택사항입력란
+              type="textarea"
               value={약속}
               placeholder="예: 10분 이상 하겠습니다."
               labelText="약속"
