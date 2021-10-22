@@ -9,9 +9,9 @@ import Header from 'src/랜딩페이지/컴포넌트/Header';
 import Footer from 'src/랜딩페이지/컴포넌트/Footer';
 import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
 import 선택사항입력란 from 'src/랜딩페이지/컴포넌트/선택사항입력란';
-import 이미지로_다운로드 from 'src/랜딩페이지/컴포넌트/이미지로_다운로드';
 import 깃허브로가기 from 'src/랜딩페이지/컴포넌트/깃허브로가기';
 import 팝업버튼 from 'src/공통/컴포넌트/팝업버튼';
+import 신청서_가져가기 from 'src/랜딩페이지/컴포넌트/신청서_가져가기';
 
 import 가벼운성교육 from 'src/랜딩페이지/컴포넌트/가벼운성교육.mdx';
 import 조심해주세요 from 'src/랜딩페이지/컴포넌트/조심해주세요.mdx';
@@ -116,9 +116,15 @@ export default function 랜딩페이지(): JSX.Element {
         </팝업버튼>
       </section>
 
-      <section>
-        <이미지로_다운로드 ref={ref} />
-      </section>
+      <신청서_가져가기
+        ref={ref}
+        신청하는사람={신청하는사람}
+        신청받는사람={신청받는사람}
+        시간={시간}
+        날짜={날짜}
+        장소={장소}
+        약속={약속}
+      />
     </div>
   );
 }

@@ -4470,6 +4470,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-copy-to-clipboard@npm:^5":
+  version: 5.0.2
+  resolution: "@types/react-copy-to-clipboard@npm:5.0.2"
+  dependencies:
+    "@types/react": "*"
+  checksum: f2ba19587a8d56bfb54b31c716a053a263ac072f01e4bc9d64dfbcce96ff3857de279a827cf71d3a417f6bc6faf1153e6fe6d26aa05a5b6c1cb8d9b576dc226b
+  languageName: node
+  linkType: hard
+
 "@types/react-syntax-highlighter@npm:11.0.5":
   version: 11.0.5
   resolution: "@types/react-syntax-highlighter@npm:11.0.5"
@@ -7507,7 +7516,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"copy-to-clipboard@npm:^3.3.1":
+"copy-to-clipboard@npm:^3, copy-to-clipboard@npm:^3.3.1":
   version: 3.3.1
   resolution: "copy-to-clipboard@npm:3.3.1"
   dependencies:
@@ -9998,6 +10007,7 @@ __metadata:
     "@types/mdx-js__react": ^1
     "@types/node": ^16.11.0
     "@types/react": 17.0.30
+    "@types/react-copy-to-clipboard": ^5
     "@types/sass": ^1
     "@types/supertest": ^2.0.11
     "@types/testing-library__jest-dom": ^5
@@ -10030,6 +10040,7 @@ __metadata:
     jest-transformer-mdx: ^3.3.0
     next: 11.1.2
     react: 17.0.2
+    react-copy-to-clipboard: ^5.0.4
     react-dom: 17.0.2
     reactjs-popup: ^2.0.5
     sass: ^1.43.2
@@ -15409,7 +15420,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.0.0, prop-types@npm:^15.6.0, prop-types@npm:^15.6.1, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
+"prop-types@npm:^15.0.0, prop-types@npm:^15.5.8, prop-types@npm:^15.6.0, prop-types@npm:^15.6.1, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
   version: 15.7.2
   resolution: "prop-types@npm:15.7.2"
   dependencies:
@@ -15680,6 +15691,18 @@ fsevents@^1.2.7:
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
   checksum: aaffa002d9372f692238a29229ff1e991d6d0077f4f83dcdf88ad3106a0737aa56e415a71b91fb585f8532e04f09d3f0fabbc5cd8291137206dc3c1a0d70674f
+  languageName: node
+  linkType: hard
+
+"react-copy-to-clipboard@npm:^5.0.4":
+  version: 5.0.4
+  resolution: "react-copy-to-clipboard@npm:5.0.4"
+  dependencies:
+    copy-to-clipboard: ^3
+    prop-types: ^15.5.8
+  peerDependencies:
+    react: ^15.3.0 || ^16.0.0 || ^17.0.0
+  checksum: dae8caae192d4937a151ec3ddad540fe4846d28646aee6d90774abcc6a077761926c99f2bcd9506a76a65524ec2c32b5ec1341e8096fcd3f6335365eaf065137
   languageName: node
   linkType: hard
 
