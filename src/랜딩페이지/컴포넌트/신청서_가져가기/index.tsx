@@ -11,8 +11,6 @@ import { Ul, Li } from 'src/랜딩페이지/컴포넌트/신청서_가져가기/
 import 버튼 from 'src/공통/컴포넌트/버튼';
 
 interface Props {
-  신청하는사람: string;
-  신청받는사람: string;
   시간: string;
   날짜: string;
   장소: string;
@@ -21,8 +19,6 @@ interface Props {
 }
 
 const 신청서_가져가기 = forwardRef(({
-  신청하는사람,
-  신청받는사람,
   시간,
   날짜,
   장소,
@@ -48,8 +44,6 @@ const 신청서_가져가기 = forwardRef(({
       </Li>
       <Li>
         <URL로_가져가기
-          신청하는사람={신청하는사람}
-          신청받는사람={신청받는사람}
           시간={시간}
           날짜={날짜}
           장소={장소}

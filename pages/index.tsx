@@ -5,6 +5,7 @@ import {
 } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useUpdateAtom } from 'jotai/utils';
 
 import 기본값_설정 from 'src/랜딩페이지/서비스/기본값_설정';
 import {
@@ -17,13 +18,14 @@ import 선택사항입력란 from 'src/랜딩페이지/컴포넌트/선택사항
 import 깃허브로가기 from 'src/랜딩페이지/컴포넌트/깃허브로가기';
 import 팝업버튼 from 'src/공통/컴포넌트/팝업버튼';
 import 신청서_가져가기 from 'src/랜딩페이지/컴포넌트/신청서_가져가기';
+import { 신청하는사람_스토어, 신청받는사람_스토어 } from 'src/랜딩페이지/스토어/참가하는사람';
 
 import 가벼운성교육 from 'src/랜딩페이지/컴포넌트/가벼운성교육.mdx';
 import 조심해주세요 from 'src/랜딩페이지/컴포넌트/조심해주세요.mdx';
 
 export default function 랜딩페이지(): JSX.Element {
-  const [신청하는사람, 신청하는사람_수정] = useState<string>('');
-  const [신청받는사람, 신청받는사람_수정] = useState<string>('');
+  const 신청하는사람_수정 = useUpdateAtom(신청하는사람_스토어);
+  const 신청받는사람_수정 = useUpdateAtom(신청받는사람_스토어);
   const [시간, 시간_수정] = useState<string>('');
   const [시간_사용함, 시간_사용함_수정] = useState<boolean>(true);
   const [날짜, 날짜_수정] = useState<string>('');
@@ -42,7 +44,7 @@ export default function 랜딩페이지(): JSX.Element {
     기본값_설정(params.get('date'), 날짜_수정, 날짜_사용함_수정);
     기본값_설정(params.get('location'), 장소_수정, 장소_사용함_수정);
     기본값_설정(params.get('promise'), 약속_수정, 약속_사용함_수정);
-  }, []);
+  }, [신청하는사람_수정, 신청받는사람_수정]);
 
   const ref = useRef<HTMLDivElement>(null);
 
@@ -54,12 +56,7 @@ export default function 랜딩페이지(): JSX.Element {
         <Header />
 
         <main>
-          <이름입력란
-            신청하는사람={신청하는사람}
-            신청하는사람_수정={신청하는사람_수정}
-            신청받는사람={신청받는사람}
-            신청받는사람_수정={신청받는사람_수정}
-          />
+          <이름입력란 />
 
           <선택입력영역>
             <선택사항입력란
@@ -98,10 +95,7 @@ export default function 랜딩페이지(): JSX.Element {
           </선택입력영역>
         </main>
 
-        <Footer
-          신청하는사람={신청하는사람}
-          신청받는사람={신청받는사람}
-        />
+        <Footer />
       </신청서>
 
       <주의사항영역>
@@ -122,8 +116,6 @@ export default function 랜딩페이지(): JSX.Element {
 
       <신청서_가져가기
         ref={ref}
-        신청하는사람={신청하는사람}
-        신청받는사람={신청받는사람}
         시간={시간}
         날짜={날짜}
         장소={장소}
