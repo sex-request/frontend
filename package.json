@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "version": "1.2.38",
+  "version": "1.2.43",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -23,8 +23,10 @@
     "@emotion/styled": "^11.3.0",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^11.1.2",
+    "@testing-library/react-hooks": "^7.0.2",
     "clipboard-polyfill": "^3.0.3",
     "html-to-image": "^1.9.0",
+    "jotai": "^1.4.0",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-copy-to-clipboard": "^5.0.4",

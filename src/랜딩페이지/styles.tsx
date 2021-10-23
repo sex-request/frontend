@@ -20,12 +20,6 @@ export const 신청서 = styled.section`
   padding: 2rem;
 `;
 
-export const 선택입력영역 = styled.section`
-  width: 80%;
-  margin: auto;
-  margin-bottom: 2rem;
-`;
-
 export const 주의사항영역 = styled.section`
   margin-bottom: 1rem;
 `;
