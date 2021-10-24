@@ -3,10 +3,10 @@ import 'reactjs-popup/dist/index.css';
 import styled from '@emotion/styled';
 
 import 버튼 from 'src/공통/컴포넌트/버튼';
-import 팔레트 from 'src/공통/팔레트';
+import { colors } from 'src/공통/styles';
 
 const 컨테이너 = styled.section`
-  background: ${팔레트.배경색};
+  background: ${colors.배경색};
 `;
 const Header = styled.header`
   width: 100%;
