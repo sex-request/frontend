@@ -61,6 +61,7 @@ module.exports = {
     '_error.tsx',
     '404.tsx',
     '500.tsx',
+    'styles.'
   ],
   coveragePathIgnorePatterns: [
     '/node_modules/',
@@ -79,6 +80,7 @@ module.exports = {
     '_error.tsx',
     '404.tsx',
     '500.tsx',
+    'styles.'
   ],
   coverageThreshold: {
     global: {

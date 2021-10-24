@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import 팔레트 from 'src/공통/팔레트';
+import { colors } from 'src/공통/styles';
 
 export const 컨테이너 = styled.div`
   overflow: hidden;
@@ -16,7 +16,7 @@ export const 컨테이너 = styled.div`
 `;
 
 export const 신청서 = styled.section`
-  background-color: ${팔레트.배경색};
+  background-color: ${colors.배경색};
   padding: 2rem;
 `;
 

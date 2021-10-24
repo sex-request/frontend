@@ -5,7 +5,7 @@ import { useAtomValue } from 'jotai/utils';
 
 import 이름입력란 from 'src/랜딩페이지/컴포넌트/이름입력란';
 import { 신청하는사람_스토어, 신청받는사람_스토어 } from 'src/랜딩페이지/스토어/참가하는사람';
-import 팔레트 from 'src/공통/팔레트';
+import { colors } from 'src/공통/styles';
 
 <Meta
   title="랜딩페이지/컴포넌트/이름입력란"
@@ -25,7 +25,7 @@ export const Section = styled.section`
   position: relative;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  background: ${팔레트.배경색};
+  background: ${colors.배경색};
 `;
 
 export const Name = styled.strong`
