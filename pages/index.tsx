@@ -5,6 +5,7 @@ import {
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useUpdateAtom } from 'jotai/utils';
+import { isChrome } from 'react-device-detect';
 
 import 기본값_설정 from 'src/랜딩페이지/서비스/기본값_설정';
 import {
@@ -99,7 +100,7 @@ export default function 랜딩페이지(): JSX.Element {
         </팝업버튼>
       </주의사항영역>
 
-      <신청서_가져가기 ref={ref} />
+      <신청서_가져가기 ref={ref} isChrome={isChrome} />
 
       <ToastContainer />
     </컨테이너>

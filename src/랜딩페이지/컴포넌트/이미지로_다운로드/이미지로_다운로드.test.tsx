@@ -2,12 +2,9 @@ import { render, screen, fireEvent } from '@testing-library/react';
 
 import 이미지로_다운로드 from 'src/랜딩페이지/컴포넌트/이미지로_다운로드';
 
-jest.mock('html2canvas', () => async () => {
-  const canvas = {
-    toDataURL: () => 'image data',
-  };
-  return canvas;
-});
+jest.mock('html2canvas', () => () => Promise.resolve({
+  toDataURL: () => 'image data',
+}));
 
 const ref = { current: document.createElement('a') };
 

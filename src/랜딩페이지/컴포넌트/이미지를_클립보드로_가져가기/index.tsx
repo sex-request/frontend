@@ -1,4 +1,5 @@
 import type { ForwardedRef, RefObject } from 'react';
+import type { ClipboardItemInterface } from 'clipboard-polyfill';
 
 import {
   forwardRef,
@@ -15,17 +16,18 @@ const 이미지를_클립보드로_가져가기 = forwardRef((_, ref: ForwardedR
     (ref as RefObject<HTMLElement>).current as HTMLElement,
     { useCORS: true },
   )
-    .then((canvas: HTMLCanvasElement) => {
-      canvas.toBlob((blob) => {
-        if (blob) {
-          write([
-            new ClipboardItem({
-              'image/png': blob as Blob,
-            }),
-          ]).then(() => toast('이미지를 클립보드에 복사했습니다.'));
-        }
-      });
-    }),
+    .then((canvas: HTMLCanvasElement) => canvas.toBlob(
+      (blob) => {
+        const clipboardItem: ClipboardItemInterface = new ClipboardItem({
+          'image/png': blob as Blob,
+        });
+
+        write([clipboardItem])
+          .then(() => toast('이미지를 클립보드에 복사했습니다.'));
+      },
+      'image/png',
+    ))
+    .catch(console.error),
   [ref]);
 
   return (

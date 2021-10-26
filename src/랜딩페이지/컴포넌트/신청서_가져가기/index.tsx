@@ -3,7 +3,6 @@ import type { PopupPosition } from 'reactjs-popup/dist/types';
 
 import { forwardRef } from 'react';
 import Popup from 'reactjs-popup';
-import { isChrome } from 'react-device-detect';
 
 import 이미지를_클립보드로_가져가기 from 'src/랜딩페이지/컴포넌트/이미지를_클립보드로_가져가기';
 import URL로_가져가기 from 'src/랜딩페이지/컴포넌트/URL로_가져가기';
@@ -13,15 +12,17 @@ import 버튼 from 'src/공통/컴포넌트/버튼';
 
 interface Props {
   position?: PopupPosition;
+  isChrome: boolean;
 }
 
 const 신청서_가져가기 = forwardRef(({
   position,
+  isChrome,
 }: Props, ref: ForwardedRef<HTMLElement>) => (
   <Popup
     trigger={<버튼>신청서 가져가기</버튼>}
     position={position || 'top center'}
-    on="hover"
+    on={['hover', 'click']}
     closeOnDocumentClick
     mouseLeaveDelay={300}
     mouseEnterDelay={0}
