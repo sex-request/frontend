@@ -3,6 +3,7 @@ import type { PopupPosition } from 'reactjs-popup/dist/types';
 
 import { forwardRef } from 'react';
 import Popup from 'reactjs-popup';
+import { isChrome } from 'react-device-detect';
 
 import 이미지를_클립보드로_가져가기 from 'src/랜딩페이지/컴포넌트/이미지를_클립보드로_가져가기';
 import URL로_가져가기 from 'src/랜딩페이지/컴포넌트/URL로_가져가기';
@@ -31,9 +32,13 @@ const 신청서_가져가기 = forwardRef(({
       <Li>
         <이미지로_다운로드 ref={ref} />
       </Li>
-      <Li>
-        <이미지를_클립보드로_가져가기 ref={ref} />
-      </Li>
+      {
+        isChrome && (
+          <Li>
+            <이미지를_클립보드로_가져가기 ref={ref} />
+          </Li>
+        )
+      }
       <Li>
         <URL로_가져가기 />
       </Li>
