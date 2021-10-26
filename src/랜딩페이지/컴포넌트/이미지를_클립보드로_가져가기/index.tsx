@@ -4,24 +4,27 @@ import {
   forwardRef,
   useCallback,
 } from 'react';
-import { toBlob } from 'html-to-image';
+import html2canvas from 'html2canvas';
 import { ClipboardItem, write } from 'clipboard-polyfill';
 import { toast } from 'react-toastify';
 
 import 버튼 from 'src/공통/컴포넌트/버튼';
 
 const 이미지를_클립보드로_가져가기 = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
-  const onClick = useCallback(() => toBlob(
+  const onClick = useCallback(() => html2canvas(
     (ref as RefObject<HTMLElement>).current as HTMLElement,
-    { cacheBust: true },
+    { useCORS: true },
   )
-    .then((dataUrl) => {
-      write([
-        new ClipboardItem({
-          'image/png': dataUrl as Blob,
-        }),
-      ]);
-      toast('이미지를 클립보드에 복사했습니다.');
+    .then((canvas: HTMLCanvasElement) => {
+      canvas.toBlob((blob) => {
+        if (blob) {
+          write([
+            new ClipboardItem({
+              'image/png': blob as Blob,
+            }),
+          ]).then(() => toast('이미지를 클립보드에 복사했습니다.'));
+        }
+      });
     }),
   [ref]);
 
