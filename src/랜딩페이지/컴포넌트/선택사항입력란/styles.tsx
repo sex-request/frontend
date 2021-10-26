@@ -1,3 +1,5 @@
+import type { ChangeEventHandler } from 'react';
+
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
@@ -9,35 +11,58 @@ export const Section = styled.section`
   margin-bottom: 0.5rem;
 `;
 
-export const CheckBox = styled.input`
-  appearance: none;
+const CustomLabel = styled.label`
+  display: block;
+  position: relative;
   width: 1rem;
   height: 1rem;
   margin-right: 0.4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+`;
+const CustomCheckbox = styled.input`
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 
-  &::after {
-    content: "";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1rem;
-    height: 1rem;
-    font-size: 1rem;
-    color: hotpink;
-    background-color: transparent;
-    border: 0.2rem solid pink;
-    border-radius: 0.2rem;
-    box-sizing: border-box;
-  }
-  
-  &:checked::after {
-    content: "✔️";
+  &:checked ~ span {
     background-color: pink;
   }
 `;
-CheckBox.defaultProps = {
-  type: 'checkbox',
-};
+CustomCheckbox.defaultProps = { type: 'checkbox' };
+const CustomCheckMark = styled.span`
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  font-size: 1rem;
+  color: hotpink;
+  background-color: transparent;
+  border: 0.2rem solid pink;
+  border-radius: 0.2rem;
+`;
+
+interface CheckBoxProps {
+  checked: boolean;
+  onChange: ChangeEventHandler<HTMLInputElement>;
+}
+export const CheckBox = ({ checked, onChange }: CheckBoxProps) => (
+  <CustomLabel>
+    <CustomCheckbox checked={checked} onChange={onChange} />
+    <CustomCheckMark>
+      { checked ? '✔️' : '' }
+    </CustomCheckMark>
+  </CustomLabel>
+);
 
 const InputFieldStyle = css`
   flex: 1;

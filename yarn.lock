@@ -6369,6 +6369,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"base64-arraybuffer@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "base64-arraybuffer@npm:0.2.0"
+  checksum: eaf06558fe9bc250f1c43fcd316e6c726da494e93cc195ff472da61874b75d3bb9e93f3a3d4fd0da13630214eb5a9dbeeec249d085b70d10c8b21990fdae8086
+  languageName: node
+  linkType: hard
+
+"base64-arraybuffer@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "base64-arraybuffer@npm:1.0.1"
+  checksum: 04b6fe6818b1c79774fa8aea169063521ad177f2ba04d2a4a0f00fca297d516319b551a3cda76050263da751b4ffb07d939fc1b5eb155f0e429659733e60afb0
+  languageName: node
+  linkType: hard
+
 "base64-js@npm:^1.0.2":
   version: 1.5.1
   resolution: "base64-js@npm:1.5.1"
@@ -7773,6 +7787,15 @@ __metadata:
     randombytes: ^2.0.0
     randomfill: ^1.0.3
   checksum: c1609af82605474262f3eaa07daa0b2140026bd264ab316d4bf1170272570dbe02f0c49e29407fe0d3634f96c507c27a19a6765fb856fed854a625f9d15618e2
+  languageName: node
+  linkType: hard
+
+"css-line-break@npm:2.0.1":
+  version: 2.0.1
+  resolution: "css-line-break@npm:2.0.1"
+  dependencies:
+    base64-arraybuffer: ^0.2.0
+  checksum: 71ea449986bc2f8d1cfebe102a5a6f9419c3f6ebb4b622ac0f530a6aa2d1d8de0f4688a2c09a85486cfb074eed59eeaf226dc2fd3727295885553b489abf63fd
   languageName: node
   linkType: hard
 
@@ -10091,7 +10114,7 @@ __metadata:
     eslint-plugin-react: ^7.26.1
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-testing-library: ^4.12.4
-    html-to-image: ^1.9.0
+    html2canvas: ^1.3.2
     husky: ^7.0.0
     identity-obj-proxy: ^3.0.0
     jest: ^27.2.5
@@ -10102,6 +10125,7 @@ __metadata:
     next: 11.1.2
     react: 17.0.2
     react-copy-to-clipboard: ^5.0.4
+    react-device-detect: ^2.1.2
     react-dom: 17.0.2
     react-toastify: ^8.0.3
     reactjs-popup: ^2.0.5
@@ -11020,13 +11044,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"html-to-image@npm:^1.9.0":
-  version: 1.9.0
-  resolution: "html-to-image@npm:1.9.0"
-  checksum: e4472be2481e85cdf85decdaa04b8acc6d2124ed8957d5fcaa07a6d0c4da4e3084e380793a96abfa1af58029fba100ec8b1a5fed8318c02439923c14377b6f78
-  languageName: node
-  linkType: hard
-
 "html-void-elements@npm:^1.0.0":
   version: 1.0.5
   resolution: "html-void-elements@npm:1.0.5"
@@ -11065,6 +11082,16 @@ fsevents@^1.2.7:
   peerDependencies:
     webpack: ^5.20.0
   checksum: 4963e1955df0d97021bc725700f2d24094506ea1b70d3a969edbd65127701523315993c5428ff8b36ab4bd5459a76e139d420d528ba76aade5565cb92361b89c
+  languageName: node
+  linkType: hard
+
+"html2canvas@npm:^1.3.2":
+  version: 1.3.2
+  resolution: "html2canvas@npm:1.3.2"
+  dependencies:
+    css-line-break: 2.0.1
+    text-segmentation: ^1.0.2
+  checksum: 71005b8aab9cfdd292e7a5e3be16840a7ba9a92e4b0f4f30518ed527f412eb957e207af474a508d7e2710ad4ec4532a55ccf209a02a6fae33ba02613d9b010ff
   languageName: node
   linkType: hard
 
@@ -15837,6 +15864,18 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"react-device-detect@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "react-device-detect@npm:2.1.2"
+  dependencies:
+    ua-parser-js: ^0.7.30
+  peerDependencies:
+    react: ">= 0.14.0 < 18.0.0"
+    react-dom: ">= 0.14.0 < 18.0.0"
+  checksum: 3cc16b41324194cb812c2a6214107a2d75d8d4c44f3457b547040e24c24774e3b062d28be6dfa1775608d05a83dbc0dc226ed6e52077e27c1fc957e11dd553dc
+  languageName: node
+  linkType: hard
+
 "react-docgen-typescript@npm:^2.0.0":
   version: 2.1.1
   resolution: "react-docgen-typescript@npm:2.1.1"
@@ -18081,6 +18120,15 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"text-segmentation@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "text-segmentation@npm:1.0.2"
+  dependencies:
+    utrie: ^1.0.1
+  checksum: 087ae66abef4f2b6ecd7a3aff1c0ed6f84e0dd3bb92d339237b6d15e6227cab5b1cfcef95b9734713e1026bdaa9d3207585cabac277049aa3e8a9187d93c10da
+  languageName: node
+  linkType: hard
+
 "text-table@npm:0.2.0, text-table@npm:^0.2.0":
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
@@ -18511,6 +18559,13 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"ua-parser-js@npm:^0.7.30":
+  version: 0.7.30
+  resolution: "ua-parser-js@npm:0.7.30"
+  checksum: 19aad6e1b9e93cf3c57e139858811c2c94031ed769f1ac36dc3cda1e1e5d2c73c2e02ddf4f9e0ea140069f803315484f955488961172a6a01e9322b6c042ae98
+  languageName: node
+  linkType: hard
+
 "unbox-primitive@npm:^1.0.1":
   version: 1.0.1
   resolution: "unbox-primitive@npm:1.0.1"
@@ -18901,6 +18956,15 @@ resolve@^2.0.0-next.3:
   version: 1.0.1
   resolution: "utils-merge@npm:1.0.1"
   checksum: c81095493225ecfc28add49c106ca4f09cdf56bc66731aa8dabc2edbbccb1e1bfe2de6a115e5c6a380d3ea166d1636410b62ef216bb07b3feb1cfde1d95d5080
+  languageName: node
+  linkType: hard
+
+"utrie@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "utrie@npm:1.0.1"
+  dependencies:
+    base64-arraybuffer: ^1.0.1
+  checksum: 7c021a0b581ab55d57c4436c1431e64b31a920e037d4f3c7139a670be64232a5426142b1523351f7852a1c7e777755701fd96a5aeb82fc35eb8722cc7b01b868
   languageName: node
   linkType: hard
 
