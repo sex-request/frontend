@@ -87,6 +87,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-hooks", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:4.2.0"],
             ["eslint-plugin-testing-library", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:4.12.4"],
             ["html-to-image", "npm:1.9.0"],
+            ["html2canvas", "npm:1.3.2"],
             ["husky", "npm:7.0.2"],
             ["identity-obj-proxy", "npm:3.0.0"],
             ["jest", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:27.2.5"],
@@ -10677,6 +10678,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["base64-arraybuffer", [
+        ["npm:0.2.0", {
+          "packageLocation": "./.yarn/cache/base64-arraybuffer-npm-0.2.0-a0bf606f69-eaf06558fe.zip/node_modules/base64-arraybuffer/",
+          "packageDependencies": [
+            ["base64-arraybuffer", "npm:0.2.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/base64-arraybuffer-npm-1.0.1-e1053d5403-04b6fe6818.zip/node_modules/base64-arraybuffer/",
+          "packageDependencies": [
+            ["base64-arraybuffer", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["base64-js", [
         ["npm:1.5.1", {
           "packageLocation": "./.yarn/cache/base64-js-npm-1.5.1-b2f7275641-669632eb37.zip/node_modules/base64-js/",
@@ -12235,6 +12252,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["inherits", "npm:2.0.4"],
             ["source-map", "npm:0.6.1"],
             ["source-map-resolve", "npm:0.6.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["css-line-break", [
+        ["npm:2.0.1", {
+          "packageLocation": "./.yarn/cache/css-line-break-npm-2.0.1-8e9e002e01-71ea449986.zip/node_modules/css-line-break/",
+          "packageDependencies": [
+            ["css-line-break", "npm:2.0.1"],
+            ["base64-arraybuffer", "npm:0.2.0"]
           ],
           "linkType": "HARD",
         }]
@@ -15239,6 +15266,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-hooks", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:4.2.0"],
             ["eslint-plugin-testing-library", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:4.12.4"],
             ["html-to-image", "npm:1.9.0"],
+            ["html2canvas", "npm:1.3.2"],
             ["husky", "npm:7.0.2"],
             ["identity-obj-proxy", "npm:3.0.0"],
             ["jest", "virtual:d9650954c7f1725ea712d2e40695de9ea5d1c0fa9b89379134c62909d440d91b03d6c37e2823804a3404472b90a5bec73c82193190dd3c4db4c9e9edd75db91e#npm:27.2.5"],
@@ -16311,6 +16339,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [
             "@types/webpack",
             "webpack"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["html2canvas", [
+        ["npm:1.3.2", {
+          "packageLocation": "./.yarn/cache/html2canvas-npm-1.3.2-fa784356a7-71005b8aab.zip/node_modules/html2canvas/",
+          "packageDependencies": [
+            ["html2canvas", "npm:1.3.2"],
+            ["css-line-break", "npm:2.0.1"],
+            ["text-segmentation", "npm:1.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -24379,6 +24418,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["text-segmentation", [
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/text-segmentation-npm-1.0.2-8a4c866a65-087ae66abe.zip/node_modules/text-segmentation/",
+          "packageDependencies": [
+            ["text-segmentation", "npm:1.0.2"],
+            ["utrie", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["text-table", [
         ["npm:0.2.0", {
           "packageLocation": "./.yarn/cache/text-table-npm-0.2.0-d92a778b59-b6937a38c8.zip/node_modules/text-table/",
@@ -25404,6 +25453,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/utils-merge-npm-1.0.1-363bbdfbca-c810954932.zip/node_modules/utils-merge/",
           "packageDependencies": [
             ["utils-merge", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["utrie", [
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/utrie-npm-1.0.1-c4f2c0abf0-7c021a0b58.zip/node_modules/utrie/",
+          "packageDependencies": [
+            ["utrie", "npm:1.0.1"],
+            ["base64-arraybuffer", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]
