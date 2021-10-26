@@ -2,6 +2,17 @@ import type { ChangeEventHandler } from 'react';
 
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
+import { format, parse } from 'date-fns';
+import ko from 'date-fns/locale/ko';
+import ReactDatePicker, { registerLocale } from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+
+registerLocale('ko', ko);
+
+const dateFormat: string = 'yyyy-MM-dd';
+const timeFormat: string = 'HH:mm';
+const visualDateFormat: string = 'yyyy년 MM월 dd일';
+const visualTimeFormat: string = 'a hh:mm';
 
 export const Section = styled.section`
   display: flex;
@@ -88,3 +99,67 @@ export const Textarea = styled.textarea`
   ${InputFieldStyle}
   height: 4rem;
 `;
+
+interface DatePickerProps {
+  id?: string;
+  disabled?: boolean;
+  placeholder?: string;
+  value: string;
+  onChange: (value: string) => void;
+}
+export function DatePicker({
+  id,
+  disabled,
+  placeholder,
+  value,
+  onChange,
+}: DatePickerProps): JSX.Element {
+  return (
+    <ReactDatePicker
+      id={id}
+      disabled={disabled}
+      selected={value === '' ? null : parse(value, dateFormat, new Date())}
+      onChange={(date: Date) => onChange(format(date, dateFormat, { locale: ko }))}
+      minDate={new Date()}
+      placeholderText={placeholder || format(new Date(), visualDateFormat, { locale: ko })}
+      dateFormat={visualDateFormat}
+      isClearable
+      withPortal
+      customInput={<Input />}
+      locale={ko}
+    />
+  );
+}
+
+interface TimePickerProps {
+  id?: string;
+  disabled?: boolean;
+  placeholder?: string;
+  value: string;
+  onChange: (value: string) => void;
+}
+export function TimePicker({
+  id,
+  disabled,
+  placeholder,
+  value,
+  onChange,
+}: TimePickerProps): JSX.Element {
+  return (
+    <ReactDatePicker
+      id={id}
+      disabled={disabled}
+      selected={value === '' ? null : parse(value, timeFormat, new Date())}
+      onChange={(date: Date) => onChange(format(date, timeFormat, { locale: ko }))}
+      placeholderText={placeholder || format(new Date(), visualTimeFormat, { locale: ko })}
+      dateFormat={visualTimeFormat}
+      timeFormat={visualTimeFormat}
+      showTimeSelect
+      showTimeSelectOnly
+      isClearable
+      withPortal
+      customInput={<Input />}
+      locale={ko}
+    />
+  );
+}
