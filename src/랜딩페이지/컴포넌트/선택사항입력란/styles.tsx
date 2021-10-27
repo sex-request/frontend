@@ -2,6 +2,17 @@ import type { ChangeEventHandler } from 'react';
 
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
+import { format, parse } from 'date-fns';
+import ko from 'date-fns/locale/ko';
+import ReactDatePicker, { registerLocale } from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+
+registerLocale('ko', ko);
+
+const dateFormat: string = 'yyyy-MM-dd';
+const timeFormat: string = 'HH:mm';
+const visualDateFormat: string = 'yyyy년 MM월 dd일';
+const visualTimeFormat: string = 'a hh:mm';
 
 export const Section = styled.section`
   display: flex;
@@ -9,6 +20,10 @@ export const Section = styled.section`
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 0.5rem;
+
+  & > *:last-child {
+    flex: 1;
+  }
 `;
 
 const CustomLabel = styled.label`
@@ -64,11 +79,14 @@ export const CheckBox = ({ checked, onChange }: CheckBoxProps) => (
   </CustomLabel>
 );
 
+export const TextLabel = styled.label`
+  margin-right: 1rem;
+`;
+
 const InputFieldStyle = css`
   flex: 1;
-  max-width: 67%;
+  width: 100%;
   height: 2rem;
-  margin-left: 1rem;
   padding: 0.5rem 1rem;
   background-color: pink;
   border: none;
@@ -88,3 +106,67 @@ export const Textarea = styled.textarea`
   ${InputFieldStyle}
   height: 4rem;
 `;
+
+interface DatePickerProps {
+  id?: string;
+  disabled?: boolean;
+  placeholder?: string;
+  value: string;
+  onChange: (value: string) => void;
+}
+export function DatePicker({
+  id,
+  disabled,
+  placeholder,
+  value,
+  onChange,
+}: DatePickerProps): JSX.Element {
+  return (
+    <ReactDatePicker
+      id={id}
+      disabled={disabled}
+      selected={value === '' ? null : parse(value, dateFormat, new Date())}
+      onChange={(date: Date) => onChange(date ? format(date, dateFormat) : '')}
+      minDate={new Date()}
+      placeholderText={placeholder || format(new Date(), visualDateFormat, { locale: ko })}
+      dateFormat={visualDateFormat}
+      // isClearable
+      withPortal
+      customInput={<Input />}
+      locale={ko}
+    />
+  );
+}
+
+interface TimePickerProps {
+  id?: string;
+  disabled?: boolean;
+  placeholder?: string;
+  value: string;
+  onChange: (value: string) => void;
+}
+export function TimePicker({
+  id,
+  disabled,
+  placeholder,
+  value,
+  onChange,
+}: TimePickerProps): JSX.Element {
+  return (
+    <ReactDatePicker
+      id={id}
+      disabled={disabled}
+      selected={value === '' ? null : parse(value, timeFormat, new Date())}
+      onChange={(date: Date) => onChange(date ? format(date, timeFormat) : '')}
+      placeholderText={placeholder || format(new Date(), visualTimeFormat, { locale: ko })}
+      dateFormat={visualTimeFormat}
+      timeFormat={visualTimeFormat}
+      showTimeSelect
+      showTimeSelectOnly
+      // isClearable
+      withPortal
+      customInput={<Input />}
+      locale={ko}
+    />
+  );
+}

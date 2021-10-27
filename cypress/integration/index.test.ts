@@ -7,17 +7,26 @@ describe('랜딩페이지', () => {
     cy.contains('섹스 신청서');
   });
 
-  it('쿼리 스트링을 받아 채웁니다.', () => {
-    // 한글로 주소를 적으면 에러남
-    cy.visit(
-      'http://localhost:3000?from=from&to=to&date=2021-01-01&time=12:00:00&location=location&promise=promise',
-    );
-    cy.contains('from');
-    cy.contains('to');
-    cy.get('#날짜').should('have.value', '2021-01-01');
-    cy.get('#시간').should('have.value', '12:00:00');
-    cy.get('#장소').should('have.value', 'location');
-    cy.get('#약속').should('have.value', 'promise');
+  context('주소에 쿼리스트링이 있으면', () => {
+    const 신청하는사람: string = '신청하는사람';
+    const 신청받는사람: string = '신청받는사람';
+    const 보여지는날짜: string = '2021년 10월 27일';
+    const 보여지는시간: string = '오후 10:00';
+    const 날짜: string = '2021-10-27';
+    const 시간: string = '22:00';
+    const 장소: string = '우리집';
+    const 약속: string = '10분 이상 하겠습니다.';
+
+    it('값을 받아 채웁니다.', () => {
+      cy.visit(`http://localhost:3000?from=${encodeURI(신청하는사람)}&to=${encodeURI(신청받는사람)}&time=${encodeURI(시간)}&date=${encodeURI(날짜)}&location=${encodeURI(장소)}&promise=${encodeURI(약속)}`);
+
+      cy.get('input').eq(0).should('have.value', 신청하는사람);
+      cy.get('input').eq(1).should('have.value', 신청받는사람);
+      cy.get('#날짜').should('have.value', 보여지는날짜);
+      cy.get('#시간').should('have.value', 보여지는시간);
+      cy.get('#장소').should('have.value', 장소);
+      cy.get('#약속').should('have.value', 약속);
+    });
   });
 
   context('이미지로 다운로드 버튼을 누를 때', () => {

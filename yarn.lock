@@ -2791,7 +2791,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:^2.5.4, @popperjs/core@npm:^2.6.0":
+"@popperjs/core@npm:^2.5.4, @popperjs/core@npm:^2.6.0, @popperjs/core@npm:^2.9.2":
   version: 2.10.2
   resolution: "@popperjs/core@npm:2.10.2"
   checksum: 43c189e3eb6d032433512d94761b54fc7cae15957ca5528008813f887a67b5760b949f30a5141b476be2ba5a6c677c91def150f603d2d3e30b5e97a5ae51474e
@@ -4498,6 +4498,18 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: f2ba19587a8d56bfb54b31c716a053a263ac072f01e4bc9d64dfbcce96ff3857de279a827cf71d3a417f6bc6faf1153e6fe6d26aa05a5b6c1cb8d9b576dc226b
+  languageName: node
+  linkType: hard
+
+"@types/react-datepicker@npm:^4":
+  version: 4.1.7
+  resolution: "@types/react-datepicker@npm:4.1.7"
+  dependencies:
+    "@popperjs/core": ^2.9.2
+    "@types/react": "*"
+    date-fns: ^2.0.1
+    react-popper: ^2.2.5
+  checksum: e1c7beb78e31c49bc4cab0904a02e5d2fc3945e8314b248219b13bc5acf9604347ec0e0a3b511146ce0b8cdb86b11f9f93b5c0b089e43f6ea92caf3e2e11b600
   languageName: node
   linkType: hard
 
@@ -7177,6 +7189,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"classnames@npm:^2.2.6":
+  version: 2.3.1
+  resolution: "classnames@npm:2.3.1"
+  checksum: 14db8889d56c267a591f08b0834989fe542d47fac659af5a539e110cc4266694e8de86e4e3bbd271157dbd831361310a8293e0167141e80b0f03a0f175c80960
+  languageName: node
+  linkType: hard
+
 "clean-css@npm:^4.2.3":
   version: 4.2.3
   resolution: "clean-css@npm:4.2.3"
@@ -8059,6 +8078,13 @@ __metadata:
     whatwg-mimetype: ^2.3.0
     whatwg-url: ^8.0.0
   checksum: 97caf828aac25e25e04ba6869db0f99c75e6859bb5b424ada28d3e7841941ebf08ddff3c1b1bb4585986bd507a5d54c2a716853ea6cb98af877400e637393e71
+  languageName: node
+  linkType: hard
+
+"date-fns@npm:^2.0.1, date-fns@npm:^2.24.0, date-fns@npm:^2.25.0":
+  version: 2.25.0
+  resolution: "date-fns@npm:2.25.0"
+  checksum: 8896dc1dde0ee5ef77616942423bfa11fa2017a5ac19457293b7aaedc8822ff94f0a14eaf93da573b09b601dc0149eb430988a046cc9f79a2eb15f8c66c9c50c
   languageName: node
   linkType: hard
 
@@ -10090,6 +10116,7 @@ __metadata:
     "@types/node": ^16.11.0
     "@types/react": 17.0.30
     "@types/react-copy-to-clipboard": ^5
+    "@types/react-datepicker": ^4
     "@types/sass": ^1
     "@types/supertest": ^2.0.11
     "@types/testing-library__jest-dom": ^5
@@ -10101,6 +10128,7 @@ __metadata:
     clipboard-polyfill: ^3.0.3
     css-loader: ^6.4.0
     cypress: ^8.6.0
+    date-fns: ^2.25.0
     eslint: 7.32.0
     eslint-config-airbnb: ^18.2.1
     eslint-config-airbnb-base: ^14.2.1
@@ -10125,6 +10153,7 @@ __metadata:
     next: 11.1.2
     react: 17.0.2
     react-copy-to-clipboard: ^5.0.4
+    react-datepicker: ^4.3.0
     react-device-detect: ^2.1.2
     react-dom: 17.0.2
     react-toastify: ^8.0.3
@@ -15832,6 +15861,23 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"react-datepicker@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "react-datepicker@npm:4.3.0"
+  dependencies:
+    "@popperjs/core": ^2.9.2
+    classnames: ^2.2.6
+    date-fns: ^2.24.0
+    prop-types: ^15.7.2
+    react-onclickoutside: ^6.12.0
+    react-popper: ^2.2.5
+  peerDependencies:
+    react: ^16.9.0 || ^17
+    react-dom: ^16.9.0 || ^17
+  checksum: 5d14f24015c84bfa7feed74c94131f96372ad2a76f6d67a2675047587172719ce6b74b373134ee530a54939aa923945b80c7717028ac69bd58c33a316b50dd2c
+  languageName: node
+  linkType: hard
+
 "react-dev-utils@npm:^11.0.3":
   version: 11.0.4
   resolution: "react-dev-utils@npm:11.0.4"
@@ -16019,6 +16065,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"react-onclickoutside@npm:^6.12.0":
+  version: 6.12.0
+  resolution: "react-onclickoutside@npm:6.12.0"
+  peerDependencies:
+    react: ^15.5.x || ^16.x || ^17.x
+    react-dom: ^15.5.x || ^16.x || ^17.x
+  checksum: f3d2f2fd0aaf05baaccc572895c6381bbbb01fd748a7e228f424b0f610af957fc3df748d7fefa09a88afdaedb09ffd563de04bc0614acb7a5e4031538251084b
+  languageName: node
+  linkType: hard
+
 "react-popper-tooltip@npm:^3.1.1":
   version: 3.1.1
   resolution: "react-popper-tooltip@npm:3.1.1"
@@ -16033,7 +16089,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-popper@npm:^2.2.4":
+"react-popper@npm:^2.2.4, react-popper@npm:^2.2.5":
   version: 2.2.5
   resolution: "react-popper@npm:2.2.5"
   dependencies:

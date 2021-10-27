@@ -1,12 +1,16 @@
 import {
   Section,
   CheckBox,
+  TextLabel,
   Input,
   Textarea,
+  DatePicker,
+  TimePicker,
 } from 'src/랜딩페이지/컴포넌트/선택사항입력란/styles';
 
+export type Type = 'text' | 'textarea' | 'date' | 'time';
 interface Props {
-  type?: string;
+  type?: Type;
   placeholder?: string;
   value: string;
   disabled: boolean;
@@ -25,6 +29,9 @@ export default function 선택사항입력란({
   onChecked,
 }: Props): JSX.Element {
   const isTextarea = type === 'textarea';
+  const isDate = type === 'date';
+  const isTime = type === 'time';
+  const isText = type === 'text';
 
   return (
     <Section>
@@ -32,30 +39,53 @@ export default function 선택사항입력란({
         checked={!disabled}
         onChange={(e) => onChecked(e.target.checked)}
       />
-      <label htmlFor={labelText}>
+      <TextLabel htmlFor={labelText}>
         {labelText}
-      </label>
+      </TextLabel>
       {
-        isTextarea
-          ? (
-            <Textarea
-              id={labelText}
-              value={value}
-              disabled={disabled}
-              onChange={(e) => onChange(e.target.value)}
-              placeholder={placeholder}
-            />
-          )
-          : (
-            <Input
-              id={labelText}
-              type={type}
-              value={value}
-              disabled={disabled}
-              onChange={(e) => onChange(e.target.value)}
-              placeholder={placeholder}
-            />
-          )
+        isTextarea && (
+          <Textarea
+            id={labelText}
+            value={value}
+            disabled={disabled}
+            onChange={(e) => onChange(e.target.value)}
+            placeholder={placeholder}
+          />
+        )
+      }
+      {
+        isText && (
+          <Input
+            id={labelText}
+            type={type}
+            value={value}
+            disabled={disabled}
+            onChange={(e) => onChange(e.target.value)}
+            placeholder={placeholder}
+          />
+        )
+      }
+      {
+        isDate && (
+          <DatePicker
+            id={labelText}
+            value={value}
+            disabled={disabled}
+            onChange={onChange}
+            placeholder={placeholder}
+          />
+        )
+      }
+      {
+        isTime && (
+          <TimePicker
+            id={labelText}
+            value={value}
+            disabled={disabled}
+            onChange={onChange}
+            placeholder={placeholder}
+          />
+        )
       }
     </Section>
   );
