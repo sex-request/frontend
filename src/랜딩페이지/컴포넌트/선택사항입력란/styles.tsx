@@ -20,6 +20,10 @@ export const Section = styled.section`
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 0.5rem;
+
+  & > *:last-child {
+    flex: 1;
+  }
 `;
 
 const CustomLabel = styled.label`
@@ -75,11 +79,14 @@ export const CheckBox = ({ checked, onChange }: CheckBoxProps) => (
   </CustomLabel>
 );
 
+export const TextLabel = styled.label`
+  margin-right: 1rem;
+`;
+
 const InputFieldStyle = css`
   flex: 1;
-  max-width: 67%;
+  width: 100%;
   height: 2rem;
-  margin-left: 1rem;
   padding: 0.5rem 1rem;
   background-color: pink;
   border: none;
@@ -119,11 +126,11 @@ export function DatePicker({
       id={id}
       disabled={disabled}
       selected={value === '' ? null : parse(value, dateFormat, new Date())}
-      onChange={(date: Date) => onChange(format(date, dateFormat, { locale: ko }))}
+      onChange={(date: Date) => onChange(date ? format(date, dateFormat) : '')}
       minDate={new Date()}
       placeholderText={placeholder || format(new Date(), visualDateFormat, { locale: ko })}
       dateFormat={visualDateFormat}
-      isClearable
+      // isClearable
       withPortal
       customInput={<Input />}
       locale={ko}
@@ -150,13 +157,13 @@ export function TimePicker({
       id={id}
       disabled={disabled}
       selected={value === '' ? null : parse(value, timeFormat, new Date())}
-      onChange={(date: Date) => onChange(format(date, timeFormat, { locale: ko }))}
+      onChange={(date: Date) => onChange(date ? format(date, timeFormat) : '')}
       placeholderText={placeholder || format(new Date(), visualTimeFormat, { locale: ko })}
       dateFormat={visualTimeFormat}
       timeFormat={visualTimeFormat}
       showTimeSelect
       showTimeSelectOnly
-      isClearable
+      // isClearable
       withPortal
       customInput={<Input />}
       locale={ko}
