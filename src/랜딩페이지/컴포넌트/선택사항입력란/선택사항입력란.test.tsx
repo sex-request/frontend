@@ -72,7 +72,7 @@ describe('선택사항입력란 컴포넌트', () => {
 
   context('type이 date일 때', () => {
     const givenType: string = 'date';
-    const givenValue: string = '2021년 10월 27일';
+    const givenValue: string = '2077년 10월 27일';
     const onChange: () => void = jest.fn();
 
     context('value가 변하면', () => {
