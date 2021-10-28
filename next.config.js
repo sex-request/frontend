@@ -9,9 +9,9 @@ const withMDX = require('@next/mdx')({
 module.exports = withMDX({
   reactStrictMode: true,
   images: {
+    formats: ['image/avif', 'image/webp'],
     loader: 'imgix',
     path: isProduction ? productionURL : 'http://localhost:3000/',
   },
-  assetPrefix: isProduction ? productionURL : '',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 });
