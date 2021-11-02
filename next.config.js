@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 
 const isProduction = process.env.NODE_ENV === 'production';
-const productionURL = 'https://sex-request.github.io';
-const productionPath = '/frontend'
+const productionURL = 'https://sex-request.app';
+const productionPath = '/'
 const withMDX = require('@next/mdx')({
   extension: /\.mdx$/,
 });
