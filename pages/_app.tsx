@@ -17,9 +17,7 @@ function App({ Component, pageProps }: AppProps) {
 
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="manifest" href="/frontend/manifest.json" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" href="/frontend/favicon.ico" />
 
         <title>섹스 신청서</title>
       </Head>
