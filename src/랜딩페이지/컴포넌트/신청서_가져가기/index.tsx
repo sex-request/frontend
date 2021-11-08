@@ -28,16 +28,19 @@ const 신청서_가져가기 = forwardRef(({
     mouseEnterDelay={0}
     contentStyle={{ padding: 0, border: 'none' }}
     arrow={false}
+    nested
   >
     <Ul>
-      <Li>
-        <이미지로_다운로드 ref={ref} />
-      </Li>
       {
         isChrome && (
-          <Li>
-            <이미지를_클립보드로_가져가기 ref={ref} />
-          </Li>
+          <>
+            <Li>
+              <이미지로_다운로드 ref={ref} />
+            </Li>
+            <Li>
+              <이미지를_클립보드로_가져가기 ref={ref} />
+            </Li>
+          </>
         )
       }
       <Li>
