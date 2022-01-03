@@ -4,39 +4,6 @@ const defaultWidth = 1134;
 const totalWidth = paddingHorizontal * 2 + defaultWidth;
 
 export const rem = (px: number): string => `${px / defaultFontSize}rem`;
-export const em = (px: number): string => `${px / defaultFontSize}em`;
-
-interface ClampProps {
-  line: number;
-  height: number;
-  lineHeight: number;
-}
-export const clamp = ({
-  line,
-  height,
-  lineHeight = 1.2,
-}: ClampProps): string => (`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: ${line};
-  max-height: ${rem(height)};
-  line-height: ${lineHeight};
-`);
-
-export const mq = {
-  maxMobile: `@media screen and (max-width: ${rem(480)})`,
-  minTablet: `@media screen and (min-width: ${rem(481)})`,
-  maxTablet: `@media screen and (max-width: ${rem(768)})`,
-  minXsmall: `@media screen and (min-width: ${rem(769)})`,
-  maxXsmall: `@media screen and (max-width: ${rem(1024)})`,
-  minSmall: `@media screen and (min-width: ${rem(1025)})`,
-  maxSmall: `@media screen and (max-width: ${rem(1200)})`,
-  minLarge: `@media screen and (min-width: ${rem(1201)})`,
-  maxLarge: `@media screen and (max-width: ${rem(1920)})`,
-  minXlarge: `@media screen and (min-width: ${rem(1921)})`,
-};
 
 export const fontWeights = {
   thin: 100,

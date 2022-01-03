@@ -11,9 +11,4 @@ export const H1 = styled.h1`
   * {
     vertical-align: bottom;
   }
-
-  img {
-    width: 3rem;
-    height: 3rem;
-  }
 `;
